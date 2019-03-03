@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="img/header/logo.png" alt="Whatgeekneeds logo">
+            </div>
+            <div class="header-user-login">
+                <a href="#">
+                    <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
+                    <p>moje konto</p>
+                </a>
+                <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
+                </button>
+            </div>
+            <div class="header-search-form">
+                <input type="text" id="name" placeholder="Czego szukasz?">
+                <button type="button" class="btnSearch"><img src="img/header/search-icon.png" alt=""> Szukaj</button>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="navigation-user">
+                <a>
+                    <img src="img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
+                    <h3>moje konto</h3>
+                </a>
+                <button class="hamburger-menu-icon-visible"><img src="img/header/nav/circle.svg" alt="Hamburger menu icon"></a>
+            </div>
+            <div class="navigation-list">
+                <ul>
+                    <li><span>Wszystkie produkty</span>
+                        <button class="navigation-list-plus"><img src="img/header/nav/cross.png" alt="White cross"></button>
+                        <ul class="navigation-list-products hidden">
+                            <li><a href="#">Gadżety antystresowe</a></li>
+                            <li><a href="#">Kubki</a></li>
+                            <li><a href="#">T-shirty</a></li>
+                            <li><a href="#">Skarpety</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Promocje</a></li>
+                    <li><a href="#">Nowości</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="rules.html">Regulamin</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="#">Faq</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="section-banner-container"><a href="#"><img src="img/banner/banner.png" alt="Banner section image"></a>
+        </div>
+
+    </section>
+    <section>
+        <div class="products-list-text">
+            <p>Produkty</p>
+        </div>
+        <div class="products-list">
+            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                    <div class="item-image">
+                        <img src="img/items/t-shirt.png" alt="T-shirt Nerd">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>T-shirt nerd</h3>
+                        <p>69 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="#">
+                    <div class="item-image">
+                        <img src="img/items/gadget1.png" alt="Gadget Mushroom">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>Gadżet antystresowy</h3>
+                        <p>24 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="#">
+                    <div class="item-image">
+                        <img src="img/items/mug.png" alt="Mug game-over">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>Kubek game over</h3>
+                        <p>45 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="#">
+                    <div class="item-image">
+                        <img src="img/items/tesla_socks.png" alt="Tesla socks">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>Skarpety tesla</h3>
+                        <p>32 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="#">
+                    <div class="item-image">
+                        <img src="img/items/webcam_cover.png" alt="Webcam cover">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>Zaślepka na kamerkę</h3>
+                        <p>18 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="#">
+                    <div class="item-image">
+                        <img src="img/items/gadget-donut.png" alt="Gadget donut">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>Gadżet antystresowy</h3>
+                        <p>24 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="show-more">
+            <p>Pokaż więcej</p>
+            <button><img src="img/items/item-list-cross.png" alt="Cross to show more"></button>
+        </div>
+    </section>
+    <section>
+        <a href="#">
+            <div class="section-blog-container">
+                <img src="/img/blog/web-blog.png" alt="">
+                <h3>Siedem grzechów głównych początkującego</h3>
+                <a href="#">
+                    <p>Czytaj więcej >></p>
+                </a>
+            </div>
+        </a>
+    </section>
+    <section>
+        <div class="newsletter-container">
+            <img src="/img/newsletter/newsletter-envelopes.png" alt="White envelopes">
+            <p>Zapisz się do newslettera</p>
+            <input type="text" class="newsletter-input" id="name" placeholder="Imię">
+            <input type="text" class="newsletter-input" id="e-mail" placeholder="e-mail">
+            <div class="newsletter-container-checkbox">
+                <input id="check1" type="checkbox" class="checkbox-input">
+                <label for="check1">Akceptuję regulamin i wyrażam zgodę na przetwarzanie danychosobowych.</label>
+            </div>
+            <button type="button" class="newsletter-btn">Potwierdź</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <span class="copyright-text">
+                <p>Copyright 2019 whatgeekneeds.com</p>
+            </span>
+            <span class="social-media">
+                <h3>Social Media:</h3>
+                <a href="#"><img src="img/footer/facebook_logo.png" alt="Facebook Logo"></a>
+                <a href="#"><img src="img/footer/instagram_logo.png" alt="Instagram Logo"></a>
+            </span>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

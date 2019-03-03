@@ -1,0 +1,16 @@
+@mixin flex($justifyC, $alignI) {
+    display: flex;
+    justify-content: $justifyC;
+    align-items: $alignI;
+}
+
+@mixin header-placeholder {
+    color: $input-font-color;
+    font-family: $secondary-font;
+    font-size: 14px;
+}
+
+@mixin item-page-grid{
+
+    
+}

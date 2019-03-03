@@ -1,0 +1,34 @@
+/* Rules page */
+.contact-container {
+    color: $primary-font-color;
+    margin: 0;
+
+    h1 {
+        font-size: 14px;
+        font-family: "Suprema - Semi Bold";
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+
+.rules-text {
+    span {
+        font-size: 9px;
+    }
+
+    a {
+        color: $primary-font-color;
+        font-weight: 600;
+        font-family: "Suprema - Semi Bold";
+        font-size: 9px;
+    }
+
+    p {
+        font-family: $secondary-font;
+        font-size: 8px;
+        margin: 10px;
+    }
+}

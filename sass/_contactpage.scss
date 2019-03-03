@@ -1,0 +1,68 @@
+.contact-container {
+    color: #363636;
+    margin: 0;
+
+    h1 {
+        font-size: 14px;
+        font-family: "Suprema - Semi Bold";
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+
+.contact-text {
+    span {
+        font-size: 9px;
+    }
+
+    a {
+        color: $primary-font-color;
+        font-weight: 600;
+        font-family: "Suprema - Semi Bold";
+        font-size: 9px
+    }
+
+    p {
+        font-family: $secondary-font;
+        font-size: 8px;
+        margin: 10px;
+    }
+}
+
+
+
+.contact-details {
+    font-size: 10px;
+    font-family: "Suprema - Semi Bold";
+    margin: 10px;
+    text-transform: none;
+
+    img {
+        margin-right: 8px;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+        line-height: 10px;
+    }
+}
+
+img.envelope {
+    height: 10px;
+    width: 13px;
+}
+
+img.phone {
+    height: 13px;
+    width: 13px;
+}
+
+img.pointer {
+    height: 19px;
+    width: 13px;
+}
