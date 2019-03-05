@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: "Suprema - Semi Bold";
-    src: url('fonts/Suprema/ SemiBold.ttf');
+    src: url('../fonts/SupremaSemiBold.ttf');
 }
 
 @font-face {
     font-family: "Suprema";
-    src: url("/fonts/Suprema\ Regular.ttf")
+    src: url("../fonts/Suprema\ Regular.ttf")
 }
 
 @font-face {
     font-family: "Suprema - Extra Bold";
-    src: url('fonts/Suprema/ ExtraBold.ttf');
+    src: url('../fonts/SupremaExtraBold.ttf');
 }
 
 $primary-font: "Suprema - Extra Bold";
