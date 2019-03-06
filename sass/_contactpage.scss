@@ -1,14 +1,5 @@
 .contact-container {
-    color: #363636;
-    margin: 0;
-
-    h1 {
-        font-size: 14px;
-        font-family: "Suprema - Semi Bold";
-        font-weight: 400;
-        padding: 0;
-        margin: 0;
-    }
+    @include containerRulesForText;
 }
 
 

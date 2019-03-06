@@ -262,23 +262,24 @@ button.hamburger-menu-icon {
   list-style: none;
   border-top: 1px solid #aeeb73;
   padding: 8px 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .navigation-list button {
   border: 0;
   background-color: transparent;
+}
+
+.navigation-list-plus {
+  width: 8px;
+  height: 8px;
+  margin: auto 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.navigation-list button img {
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-left: 10px;
+.rotated {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .navigation-list span,
@@ -289,13 +290,15 @@ a {
   font-size: 14px;
 }
 
-.navigation-list-products li {
+.navigation-list-products
+li {
   border: none;
   margin-left: 20px;
   padding: 4px;
 }
 
-.navigation-list-products li a {
+.navigation-list-products
+li a {
   font-size: 10px;
 }
 
@@ -1173,12 +1176,32 @@ ul.similiar-items-list {
   }
 }
 
-.rules-text button {
+.faq-container {
+  color: #363636;
+  margin: 0;
+}
+
+.faq-container h1 {
+  font-size: 14px;
+  font-family: "Suprema - Semi Bold";
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-btn {
   display: block;
   width: 100%;
   background-color: #6cda00;
-  height: 16px;
-  margin-bottom: 10px;
+  height: 24px;
+  margin: 10px auto;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.active {
+  background-color: #058325;
 }
 
 .faq-par {
@@ -1187,5 +1210,286 @@ ul.similiar-items-list {
 
 .shown {
   display: block;
+}
+
+/* Section products list */
+.products-list-text {
+  margin-bottom: 6px;
+}
+
+.products-list-text span {
+  font-size: 9px;
+}
+
+.products-list-text a {
+  color: #363636;
+  font-weight: 600;
+  font-family: "Suprema - Semi Bold";
+  font-size: 10px;
+  margin: 0;
+}
+
+.products-list-text p {
+  font-family: "Suprema - Semi Bold";
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+.sort-filter {
+  width: 100%;
+  height: 38px;
+  background-color: #6cda00;
+  color: #ffffff;
+  font-family: "Suprema";
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  margin: 6px 0;
+}
+
+.products-list {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (48%)[2];
+      grid-template-columns: repeat(2, 48%);
+  -ms-grid-rows: (200px)[auto];
+      grid-template-rows: repeat(auto, 200px);
+  grid-gap: 16px 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item-box {
+  width: 100%;
+  font-size: 6px;
+  text-align: center;
+  border: 4px solid #f0eeee;
+  background-color: #ffffff;
+}
+
+.item-box a {
+  margin: 0;
+  padding: 0;
+}
+
+.item-image {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.item-image img {
+  height: 90%;
+  width: 90%;
+}
+
+.item-name-price {
+  background-color: #f0eeee;
+  height: 20%;
+  color: #363636;
+  margin: 2px 0 0 0;
+}
+
+.item-name-price h3 {
+  font-family: "Suprema - Semi Bold";
+  font-size: 9px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  display: block;
+}
+
+.item-name-price p {
+  font-family: "Suprema - Extra Bold";
+  font-size: 14px;
+  text-align: end;
+  margin-top: 2px;
+}
+
+.item-name-price span {
+  font-size: 11px;
+}
+
+.show-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px auto;
+}
+
+.show-more p {
+  font-size: 18px;
+  font-family: "Suprema - Semi Bold";
+  color: #363636;
+  margin: 0;
+}
+
+.show-more img {
+  margin: 10px 0;
+  width: 50px;
+  height: 50px;
+}
+
+/* Section footer */
+.footer-container {
+  margin-top: 10px;
+  margin-left: -9px;
+  width: 100vw;
+  height: 42px;
+  background: center/cover no-repeat url(../img/footer/płyta_głowna.png), #058325;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #ffffff;
+}
+
+.footer-container span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-media {
+  font-family: "Suprema - Extra Bold";
+  font-size: 6px;
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-media img {
+  width: 28px;
+  height: 28px;
+}
+
+.social-media a {
+  margin: auto 5px;
+}
+
+.copyright-text {
+  width: 50%;
+  opacity: 0.3;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  font-family: "Suprema";
+  font-size: 6px;
+}
+
+/* Small devices */
+@media (max-width: 375px) {
+  .item-name-price h3 {
+    font-size: 8px;
+  }
+  .item-name-price p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  /* Header Section */
+  .user-login-icon a {
+    font-size: 18px;
+  }
+  .user-icon-image {
+    margin-right: 3px;
+    margin-top: 6px;
+    width: 25px;
+    height: 20px;
+  }
+  .hamburger-menu-icon {
+    width: 50px;
+    height: 30px;
+  }
+  /* Product list section */
+  .products-list-text p {
+    font-size: 24px;
+  }
+  .products-list {
+    -ms-grid-rows: (400px)[3];
+        grid-template-rows: repeat(3, 400px);
+  }
+  .item-image {
+    height: 85%;
+  }
+  .item-image img {
+    height: 80%;
+    width: 80%;
+  }
+  .item-name-price {
+    height: 15%;
+  }
+  .item-name-price h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .item-name-price p {
+    font-size: 35px;
+    margin-top: -9px;
+  }
+  .show-more p {
+    font-size: 38px;
+  }
+  .show-more img {
+    width: 100px;
+    height: 100px;
+  }
+  /* Section footer */
+  .footer-container {
+    height: 64px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .copyright-text {
+    font-size: 16px;
+    line-height: 4px;
+    height: auto;
+  }
+  .social-media {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  .social-media img {
+    width: 40px;
+    height: 40px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

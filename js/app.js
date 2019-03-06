@@ -18,19 +18,18 @@ const productList = document.querySelector(".navigation-list-products");
 let rotateDeg = 90;
 plusBtn.addEventListener("click", () => {
     productList.classList.toggle("hidden");
-    plusBtn.style.transform = "rotate(" + rotateDeg + "deg)";
+    // plusBtn.style.transform = "rotate(" + rotateDeg + "deg)";
+    plusBtn.classList.toggle("rotated");
     rotateDeg += 45;
 })
-// Function that changes images on item page
-const current = document.getElementById('current');
-const imgs = document.querySelector('.thumbnails');
+// // Function that changes images on item page
+// const current = document.getElementById('current');
+// const imgs = document.querySelector('.thumbnails');
 
-imgs.addEventListener('click', imgClick);
+// imgs.addEventListener('click', (e) =>{
+//     current.src = e.target.src;
+// });
 
-function imgClick(e) {
-    current.src = e.target.src;
-
-}
 // // Show/hide item description, detail sizing function
 // const description = document.getElementById("description");
 // const details = document.getElementById("details");
@@ -61,12 +60,12 @@ function imgClick(e) {
 // Show/hide faq paragraph
 const faqBtn = document.querySelectorAll(".faq-btn");
 const faqPar = document.querySelectorAll(".faq-par");
-for (let i = 0; i < faqBtn.length; i++){
-    faqBtn[i].addEventListener("click", ()=>{
+for (let i = 0; i < faqBtn.length; i++) {
+    faqBtn[i].addEventListener("click", () => {
         faqPar[i].classList.toggle("shown");
-        }
-    )
-    }
+        faqBtn[i].classList.toggle("active");
+    })
+}
 // Show/hide item description, detail sizing function
 const itemBtn = document.querySelectorAll(".description-list-element");
 const descriptionParagraphs = document.querySelectorAll(".item-details");

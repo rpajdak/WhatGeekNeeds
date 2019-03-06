@@ -1,15 +1,27 @@
-.rules-text {
-    button {
-        display: block;
-        width: 100%;
-        background-color: $light-green;
-        height: 16px;
-        margin-bottom: 10px;
-    }
+.faq-container {
+    @include containerRulesForText;
 }
-.faq-par{
+
+.faq-btn {
+    display: block;
+    width: 100%;
+    background-color: $light-green;
+    height: 24px;
+    margin: 10px auto;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 5px;
+}
+
+
+.active {
+    background-color: $dark-green;
+}
+
+.faq-par {
     display: none;
 }
-.shown{
+
+.shown {
     display: block;
 }
