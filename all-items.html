@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body >
     <header>
         <div class="header-container">
             <div class="header-logo">
@@ -61,7 +61,52 @@
     <section>
         <div class="section-banner-container"><a href="#"><img src="img/banner/banner.png" alt="Banner section image"></a>
         </div>
+    </section>
+    <section>
+        <!-- <div class="sort-filter-option-container"></div> -->
+            <div class="sort-filter-option hide">
+                <button class="btn close-menu"><img src="img/header/nav/cross.png" alt="Hamburger menu icon"></button>
+                <h2>Sortowanie:</h2>
+                <ul>
+                    <li><input type="checkbox" class="check1 checkbox-input-sort">
+                        <label for="check1">Według popularności - rosnąco</label>
+                    </li>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">Według popularności - malejąco</label>
+                    </li>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">Według ceny - rosnąco</label>
+                    </li>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">Według ceny - malejąco</label>
+                    </li>
+                </ul>
+                <input type="text" id="max-price" placeholder="Maksymalna cena">
+                <h2>Filtry:</h2>
+                <h3>Kategoria:</h3>
+                <ul>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">Gadżety antystresowe</label>
+                    </li>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">Kubki</label>
+                    </li>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">Skarpety</label>
+                    </li>
+                    <li><input type="checkbox" class="checkbox-input-sort">
+                        <label for="check1">T-shirty</label>
+                    </li>
 
+                    <h3>Płeć:</h3>
+                    <ul>
+                        <li><input type="checkbox" class="checkbox-input-sort">
+                            <label for="zazn">Dla kobiet</label></li>
+                        <li><input type="checkbox" class="checkbox-input-sort">
+                            <label for="zazn">Dla mężczyzn</label></li>
+                    </ul>
+                    <button class="btn confirm">Zatwierdź</button>
+            </div>
     </section>
     <section>
         <div class="products-list-text">

@@ -5,6 +5,7 @@
 
     span {
         font-size: 9px;
+        font-family: $secondary-font;
     }
 
     a {
@@ -21,17 +22,109 @@
         margin: 6px 0;
     }
 }
-.sort-filter{
-    width: 100%;
-    height: 38px;
-    background-color: $light-green;
-    color: #ffffff;
-    font-family: $secondary-font;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
-    margin: 6px 0;
+
+/* Sort and filter menu */
+.sort-filter-option-container {
+    position: absolute;
+    width: 110vw;
+    top: -10%;
+    left: -20px;
+    opacity: 0.35;
+    background-color: #000;
 }
+
+.sort-filter-option {
+    width: 70%;
+    border: 6px solid #6cda00;
+    background-color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary-font-color;
+
+    h2 {
+        font-size: 14px
+    }
+
+    h3 {
+        margin: 5px auto 5px 10px;
+        font-size: 8px;
+    }
+
+    li {
+        @include flex(flex-start, center);
+        margin-top: 2px;
+        margin-left: 20px;
+        height: 20px;
+    }
+
+    label {
+        font-family: "Suprema - Semi Bold";
+        font-size: 7px;
+        margin: 0;
+    }
+
+    label::before {
+        left: 0;
+        top: -3px;
+        background-color: #ffffff;
+    }
+
+    button {
+        background-color: $light-green;
+        border: none;
+        @include flex(center, center);
+
+        img {
+            width: 10px;
+        }
+    }
+
+    input {
+        box-shadow: inset 3px 4px 7px 1px rgba(0, 0, 0, 0.02);
+        background-color: #f0eeee;
+        height: 32px;
+        width: 70%;
+        padding: 5px;
+        color: $primary-font-color;
+        font-size: 12px;
+
+        &::placeholder {
+            color: $input-font-color;
+            ;
+        }
+    }
+
+}
+
+.checkbox-input-sort:checked+label:before {
+    content: "\2713";
+    font-size: 10px;
+    line-height: 15px;
+    background-color: #6cda00;
+}
+
+.btn {
+    width: 100%;
+    height: 24px;
+    background-color: #6cda00;
+    margin: 10px auto;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Suprema";
+}
+
+.close-menu {
+    border: none;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    margin-top: 8px;
+    border-radius: 50%;
+}
+
 
 .products-list {
     width: 100%;

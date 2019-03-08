@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="img/header/logo.png" alt="Whatgeekneeds logo">
+            </div>
+            <div class="header-user-login">
+                <a href="#">
+                    <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
+                    <p>moje konto</p>
+                </a>
+                <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
+                </button>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="navigation-user">
+                <a>
+                    <img src="img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
+                    <h3>moje konto</h3>
+                </a>
+                <button><img class="hamburger-menu-icon-visible" src="img/header/nav/circle.svg" alt="Hamburger menu icon"></a>
+            </div>
+            <div class="navigation-list">
+                <ul>
+                    <li><span>Wszystkie produkty</span>
+                        <button><img src="img/header/nav/cross.png" class="navigation-list-plus" alt="White cross"></button>
+
+                        <ul class="navigation-list-products hidden">
+                            <li><a href="#">Gadżety antystresowe</a></li>
+                            <li><a href="#">Kubki</a></li>
+                            <li><a href="#">T-shirty</a></li>
+                            <li><a href="#">Skarpety</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Promocje</a></li>
+                    <li><a href="#">Nowości</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="rules.html">Regulamin</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="basket-container">
+        <div class="chosen-items">
+            <h1>Twój koszyk</h1>
+            <span><a href="index.html">Strona główna ></a> 1/3 Dane do wysyłki</span>
+            <div class="items">
+                <ol>
+                    <li><img src="/item-pages/mushroom/gadget1.png" alt="Gadget mushroom">
+                        <div class="item-name-variant">
+                            <p class="item-name">KUBEK GAME BOY</p>
+                            <p class="item-variant">Wariant:<span>Grzybek</span></p>
+                            <p class="item-quantity">Ilość:<span>1</span> </p>
+                        </div>
+                        <p class="item-price-basket">18 <span>pln</span></p>
+                        <button class="btn btn-edit">Edytuj</button>
+                    </li>
+                    <li><img src="/item-pages/mushroom/gadget1.png" alt="Gadget mushroom">
+                        <div class="item-name-variant">
+                            <p class="item-name">KUBEK GAME BOY</p>
+                            <p class="item-variant">Wariant:<span>Grzybek</span></p>
+                            <p class="item-quantity">Ilość:<span>1</span> </p>
+                        </div>
+                        <p class="item-price-basket">18 <span>pln</span></p>
+                        <button class="btn btn-edit">Edytuj</button>
+                    </li>
+                    <li><img src="/item-pages/mushroom/gadget1.png" alt="Gadget mushroom">
+                        <div class="item-name-variant">
+                            <p class="item-name">KUBEK GAME BOY</p>
+                            <p class="item-variant">Wariant:<span>Grzybek</span></p>
+                            <p class="item-quantity">Ilość:<span>1</span> </p>
+                        </div>
+                        <p class="item-price-basket">18 <span>pln</span></p>
+                        <button class="btn btn-edit">Edytuj</button>
+                    </li>
+                    <input type="text" id="promo-code" placeholder="Kod rabatowy">
+                </ol>
+
+
+
+            </div>
+        </div>
+        <div class="address-data">
+            <span>1/3 Dane do wysyłki</span>
+            <input type="text" id="name" placeholder="Imię">
+            <input type="text" id="surname" placeholder="Nazwisko">
+            <input type="text" id="street" placeholder="Ulica">
+            <input type="text" id="number" placeholder="Numer">
+            <input type="text" id="city" placeholder="Miasto">
+            <input type="text" id="zip-code" placeholder="Kod pocztowy">
+            <p>Faktura</p>
+        </div>
+        <div class="invoice">
+            <h2>Dane do fakury</h2>
+            <p>Powtórz dane</p>
+            <input type="text" id="company-name" placeholder="Nazwa firny">
+            <input type="text" id="name" placeholder="Imię">
+            <input type="text" id="surname" placeholder="Nazwisko">
+            <input type="text" id="street" placeholder="Ulica">
+            <input type="text" id="number" placeholder="Numer">
+            <input type="text" id="city" placeholder="Miasto">
+            <input type="text" id="zip-code" placeholder="Kod pocztowy">
+            <input type="text" id="nip" placeholder="NIP">
+        </div>
+        <button class="btn">Zatwierdź</button>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <span class="copyright-text">
+                <p>Copyright 2019 whatgeekneeds.com</p>
+            </span>
+            <span class="social-media">
+                <h3>Social Media:</h3>
+                <a href="#"><img src="img/footer/facebook_logo.png" alt="Facebook Logo"></a>
+                <a href="#"><img src="img/footer/instagram_logo.png" alt="Instagram Logo"></a>
+            </span>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -57,7 +57,6 @@ button.hamburger-menu-icon {
     width: 24px;
     height: 16px;
     margin-top: 6px;
-    margin-right: 10px;
 }
 
 .header-search-form {
@@ -109,6 +108,7 @@ button.hamburger-menu-icon {
     transition: 0.5s transform ease-in-out;
     top: -100vh;
     left: 0;
+    z-index: 2;
 }
 
 .hidden {
@@ -120,9 +120,8 @@ button.hamburger-menu-icon {
     border: none;
     width: 24px;
     height: 24px;
-    margin-right: 16px;
     margin-top: 8px;
-
+    margin-right: 6px;
 }
 
 
@@ -402,15 +401,15 @@ li {
     height: 20px;
     margin-top: 5px;
     margin-left: 13px;
+    label{
+         align-items: center;
+         position: relative;
+         padding-left: 25px;
+         font-size: 5px;
+         font-family: $secondary-font;
+    }
 }
 
-.newsletter-container-checkbox label {
-    align-items: center;
-    position: relative;
-    padding-left: 25px;
-    font-size: 5px;
-    font-family: $secondary-font;
-}
 
 input[type=checkbox] {
     display: none;

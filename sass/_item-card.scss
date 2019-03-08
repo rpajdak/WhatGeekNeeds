@@ -159,7 +159,7 @@
     border-radius: 50%;
 }
 
-.item-sizes li:hover {
+.item-sizes li:active {
     border: 1px solid $light-green;
 }
 
@@ -186,7 +186,7 @@ ul.similiar-items-list {
 
     .main-photo {
         @include flex(center, center);
-
+        height: 70vh;
         img {
             width: 50%;
             height: 80%;
