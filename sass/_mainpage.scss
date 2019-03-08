@@ -172,8 +172,6 @@ button.hamburger-menu-icon {
     transform: rotate(90deg);
 }
 
-
-
 .navigation-list span,
 a {
     color: #ffffff;
@@ -182,9 +180,7 @@ a {
     font-size: 14px;
 }
 
-.navigation-list-products
-
-li {
+.navigation-list-products li {
     border: none;
     margin-left: 20px;
     padding: 4px;
@@ -401,12 +397,13 @@ li {
     height: 20px;
     margin-top: 5px;
     margin-left: 13px;
-    label{
-         align-items: center;
-         position: relative;
-         padding-left: 25px;
-         font-size: 5px;
-         font-family: $secondary-font;
+
+    label {
+        align-items: center;
+        position: relative;
+        padding-left: 25px;
+        font-size: 5px;
+        font-family: $secondary-font;
     }
 }
 

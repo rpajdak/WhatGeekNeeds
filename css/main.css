@@ -290,15 +290,13 @@ a {
   font-size: 14px;
 }
 
-.navigation-list-products
-li {
+.navigation-list-products li {
   border: none;
   margin-left: 20px;
   padding: 4px;
 }
 
-.navigation-list-products
-li a {
+.navigation-list-products li a {
   font-size: 10px;
 }
 
