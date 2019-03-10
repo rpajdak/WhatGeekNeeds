@@ -24,15 +24,12 @@
 }
 
 /* Sort and filter menu */
-.sort-filter-option-container {
-    position: absolute;
-    width: 110vw;
-    top: -10%;
-    left: -20px;
+.active-fade {
     opacity: 0.35;
-    background-color: #000;
+    display: block;
+    z-index: 0;
+    position: relative;
 }
-
 .sort-filter-option {
     width: 70%;
     border: 6px solid #6cda00;
@@ -43,7 +40,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $primary-font-color;
-
+    opacity: 1;
+    z-index: 1002;
     h2 {
         font-size: 14px
     }
@@ -100,7 +98,6 @@
 }
 
 .checkbox-input-sort:checked+label:before {
-    content: "\2713";
     font-size: 10px;
     line-height: 15px;
     background-color: #6cda00;

@@ -9,210 +9,211 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body >
-    <header>
-        <div class="header-container">
-            <div class="header-logo">
-                <img src="img/header/logo.png" alt="Whatgeekneeds logo">
+<body onload="openCloseSortMenu ()">
+    <div class="fade">
+        <header>
+            <div class="header-container">
+                <div class="header-logo">
+                    <img src="img/header/logo.png" alt="Whatgeekneeds logo">
+                </div>
+                <div class="header-user-login">
+                    <a href="#">
+                        <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
+                        <p>moje konto</p>
+                    </a>
+                    <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
+                    </button>
+                </div>
+                <div class="header-search-form">
+                    <input type="text" id="name" placeholder="Czego szukasz?">
+                    <button type="button" class="btnSearch"><img src="img/header/search-icon.png" alt=""> Szukaj</button>
+                </div>
             </div>
-            <div class="header-user-login">
-                <a href="#">
-                    <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
-                    <p>moje konto</p>
-                </a>
-                <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
-                </button>
-            </div>
-            <div class="header-search-form">
-                <input type="text" id="name" placeholder="Czego szukasz?">
-                <button type="button" class="btnSearch"><img src="img/header/search-icon.png" alt=""> Szukaj</button>
-            </div>
-        </div>
-        <nav class="navigation">
-            <div class="navigation-user">
-                <a>
-                    <img src="img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
-                    <h3>moje konto</h3>
-                </a>
-                <button><img class="hamburger-menu-icon-visible" src="img/header/nav/circle.svg" alt="Hamburger menu icon"></a>
-            </div>
-            <div class="navigation-list">
-                <ul>
-                    <li><span>Wszystkie produkty</span>
-                        <button><img src="img/header/nav/cross.png" class="navigation-list-plus" alt="White cross"></button>
-
-                        <ul class="navigation-list-products hidden">
-                            <li><a href="#">Gadżety antystresowe</a></li>
-                            <li><a href="#">Kubki</a></li>
-                            <li><a href="#">T-shirty</a></li>
-                            <li><a href="#">Skarpety</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Promocje</a></li>
-                    <li><a href="#">Nowości</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="rules.html">Regulamin</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="faq.html">Faq</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section>
-        <div class="section-banner-container"><a href="#"><img src="img/banner/banner.png" alt="Banner section image"></a>
-        </div>
-    </section>
-    <section>
-        <!-- <div class="sort-filter-option-container"></div> -->
-            <div class="sort-filter-option hide">
-                <button class="btn close-menu"><img src="img/header/nav/cross.png" alt="Hamburger menu icon"></button>
-                <h2>Sortowanie:</h2>
-                <ul>
-                    <li><input type="checkbox" class="check1 checkbox-input-sort">
-                        <label for="check1">Według popularności - rosnąco</label>
-                    </li>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">Według popularności - malejąco</label>
-                    </li>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">Według ceny - rosnąco</label>
-                    </li>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">Według ceny - malejąco</label>
-                    </li>
-                </ul>
-                <input type="text" id="max-price" placeholder="Maksymalna cena">
-                <h2>Filtry:</h2>
-                <h3>Kategoria:</h3>
-                <ul>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">Gadżety antystresowe</label>
-                    </li>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">Kubki</label>
-                    </li>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">Skarpety</label>
-                    </li>
-                    <li><input type="checkbox" class="checkbox-input-sort">
-                        <label for="check1">T-shirty</label>
-                    </li>
-
-                    <h3>Płeć:</h3>
+            <nav class="navigation">
+                <div class="navigation-user">
+                    <a>
+                        <img src="img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
+                        <h3>moje konto</h3>
+                    </a>
+                    <button><img class="hamburger-menu-icon-visible" src="img/header/nav/circle.svg" alt="Hamburger menu icon"></a>
+                </div>
+                <div class="navigation-list">
                     <ul>
-                        <li><input type="checkbox" class="checkbox-input-sort">
-                            <label for="zazn">Dla kobiet</label></li>
-                        <li><input type="checkbox" class="checkbox-input-sort">
-                            <label for="zazn">Dla mężczyzn</label></li>
+                        <li><span>Wszystkie produkty</span>
+                            <button><img src="img/header/nav/cross.png" class="navigation-list-plus" alt="White cross"></button>
+
+                            <ul class="navigation-list-products hidden">
+                                <li><a href="#">Gadżety antystresowe</a></li>
+                                <li><a href="#">Kubki</a></li>
+                                <li><a href="#">T-shirty</a></li>
+                                <li><a href="#">Skarpety</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Promocje</a></li>
+                        <li><a href="#">Nowości</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="rules.html">Regulamin</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="faq.html">Faq</a></li>
                     </ul>
-                    <button class="btn confirm">Zatwierdź</button>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="section-banner-container"><a href="#"><img src="img/banner/banner.png" alt="Banner section image"></a>
             </div>
-    </section>
-    <section>
-        <div class="products-list-text">
-            <p>Wszystkie produkty</p>
-            <span><a href="index.html">Strona główna ></a>Wszystkie produkty</span>
-        </div>
-        <button class="btn sort-filter">SORTOWANIE | FILTRY</button>
-        <div class="products-list">
-            <div class="item-box"><a href="item-pages/superman-socks/superman-socks.html">
-                    <div class="item-image">
-                        <img src="/item-pages/superman-socks/super_man.png" alt="Super man socks">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Skarpety Super Man</h3>
-                        <p>32 <span>pln</span></p>
-                    </div>
-                </a>
+        </section>
+        <section>
+        </section>
+        <section>
+            <div class="products-list-text">
+                <p>Wszystkie produkty</p>
+                <span><a href="index.html">Strona główna ></a>Wszystkie produkty</span>
             </div>
-            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
-                    <div class="item-image">
-                        <img src="item-pages/gameboy mug/mug_games.png" alt="Game boy mug">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Kubek game boy</h3>
-                        <p>45 <span>pln</span></p>
-                    </div>
-                </a>
+            <button class="btn sort-filter">SORTOWANIE | FILTRY</button>
+            <div class="products-list">
+                <div class="item-box"><a href="item-pages/superman-socks/superman-socks.html">
+                        <div class="item-image">
+                            <img src="/item-pages/superman-socks/super_man.png" alt="Super man socks">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Skarpety Super Man</h3>
+                            <p>32 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/gameboy mug/mug_games.png" alt="Game boy mug">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Kubek game boy</h3>
+                            <p>45 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="img/items/t-shirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="#">
+                        <div class="item-image">
+                            <img src="item-pages/mushroom/gadget1.png" alt="Gadget Mushroom">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Gadżet antystresowy</h3>
+                            <p>24 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="#">
+                        <div class="item-image">
+                            <img src="img/items/mug.png" alt="Mug game-over">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Kubek game over</h3>
+                            <p>45 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="#">
+                        <div class="item-image">
+                            <img src="img/items/tesla_socks.png" alt="Tesla socks">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Skarpety tesla</h3>
+                            <p>32 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="#">
+                        <div class="item-image">
+                            <img src="img/items/webcam_cover.png" alt="Webcam cover">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Zaślepka na kamerkę</h3>
+                            <p>18 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-box"><a href="#">
+                        <div class="item-image">
+                            <img src="img/items/gadget-donut.png" alt="Gadget donut">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>Gadżet antystresowy</h3>
+                            <p>24 <span>pln</span></p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
-                    <div class="item-image">
-                        <img src="img/items/t-shirt.png" alt="T-shirt Nerd">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>T-shirt nerd</h3>
-                        <p>69 <span>pln</span></p>
-                    </div>
-                </a>
+            <div class="show-more">
+                <p>Pokaż więcej</p>
+                <button><img src="img/items/item-list-cross.png" alt="Cross to show more"></button>
             </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="img/items/gadget1.png" alt="Gadget Mushroom">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Gadżet antystresowy</h3>
-                        <p>24 <span>pln</span></p>
-                    </div>
-                </a>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <span class="copyright-text">
+                    <p>Copyright 2019 whatgeekneeds.com</p>
+                </span>
+                <span class="social-media">
+                    <h3>Social Media:</h3>
+                    <a href="#"><img src="img/footer/facebook_logo.png" alt="Facebook Logo"></a>
+                    <a href="#"><img src="img/footer/instagram_logo.png" alt="Instagram Logo"></a>
+                </span>
             </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="img/items/mug.png" alt="Mug game-over">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Kubek game over</h3>
-                        <p>45 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="img/items/tesla_socks.png" alt="Tesla socks">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Skarpety tesla</h3>
-                        <p>32 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="img/items/webcam_cover.png" alt="Webcam cover">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Zaślepka na kamerkę</h3>
-                        <p>18 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="img/items/gadget-donut.png" alt="Gadget donut">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Gadżet antystresowy</h3>
-                        <p>24 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="show-more">
-            <p>Pokaż więcej</p>
-            <button><img src="img/items/item-list-cross.png" alt="Cross to show more"></button>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-container">
-            <span class="copyright-text">
-                <p>Copyright 2019 whatgeekneeds.com</p>
-            </span>
-            <span class="social-media">
-                <h3>Social Media:</h3>
-                <a href="#"><img src="img/footer/facebook_logo.png" alt="Facebook Logo"></a>
-                <a href="#"><img src="img/footer/instagram_logo.png" alt="Instagram Logo"></a>
-            </span>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <div class="sort-filter-option hide">
+        <button class="btn close-menu"><img src="img/header/nav/cross.png" alt="Hamburger menu icon"></button>
+        <h2>Sortowanie:</h2>
+        <ul>
+            <li><input type="checkbox" id="popular-ascending" class="check1 checkbox-input-sort">
+                <label for="popular-ascending">Według popularności - rosnąco</label>
+            </li>
+            <li><input type="checkbox" id="popular-descending" class="checkbox-input-sort">
+                <label for="popular-descending">Według popularności - malejąco</label>
+            </li>
+            <li><input type="checkbox" id="price-ascending" class="checkbox-input-sort">
+                <label for="price-ascending">Według ceny - rosnąco</label>
+            </li>
+            <li><input type="checkbox" id="price-descending" class="checkbox-input-sort">
+                <label for="price-descending">Według ceny - malejąco</label>
+            </li>
+        </ul>
+        <input type="text" id="max-price" placeholder="Maksymalna cena">
+        <h2>Filtry:</h2>
+        <h3>Kategoria:</h3>
+        <ul>
+            <li><input type="checkbox" id="gadgets" class="green-checkbox">
+                <label for="gadgets">Gadżety antystresowe</label>
+            </li>
+            <li><input type="checkbox" id="mugs" class="green-checkbox">
+                <label for="mugs">Kubki</label>
+            </li>
+            <li><input type="checkbox" id="socks" class="green-checkbox">
+                <label for="socks">Skarpety</label>
+            </li>
+            <li><input type="checkbox" id="t-shirts" class="green-checkbox">
+                <label for="t-shirts">T-shirty</label>
+            </li>
+
+            <h3>Płeć:</h3>
+            <ul>
+                <li><input type="checkbox" id="women" class="green-checkbox">
+                    <label for="women">Dla kobiet</label></li>
+                <li><input type="checkbox" id="men" class="green-checkbox">
+                    <label for="men">Dla mężczyzn</label></li>
+            </ul>
+            <button class="btn confirm">Zatwierdź</button>
+    </div>
     <script src="js/app.js"></script>
 </body>
 

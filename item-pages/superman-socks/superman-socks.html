@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 
-<body>
+<body onload="changeThumbnails(); highlightSize()">
     <header>
         <div class="header-container">
             <div class="header-logo">
@@ -38,7 +38,7 @@
             </div>
             <div class="navigation-list">
                 <ul>
-                    <li><span>Wszystkie produkty</span>
+                    <li><a href="../../all-items.html">Wszystkie produkty</a>
                         <button class="navigation-list-plus"><img src="../../img/header/nav/cross.png" alt="White cross"></button>
                         <ul class="navigation-list-products hidden">
                             <li><a href="#">Gadżety antystresowe</a></li>
@@ -61,7 +61,8 @@
         <div class="item-container">
             <h1>SKARPETY SUPER MAN</h1>
             <div class="item-text">
-                <span><a href="../../index.html">Strona główna ></a><a href="/all-items.html">Wszystkie produkty ></a> Skarpety super man
+                <span><a href="../../index.html">Strona główna ></a><a href="/all-items.html">Wszystkie produkty ></a>
+                    Skarpety super man
                 </span>
             </div>
             <div class="main-photo">
@@ -79,10 +80,10 @@
             </div>
             <span>Rozmiar</span>
             <ul class="item-sizes">
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
+                <li class="size">S</li>
+                <li class="size">M</li>
+                <li class="size">L</li>
+                <li class="size">XL</li>
             </ul>
             <button>Dodaj do koszyka</button>
             <div class="item-description-container">

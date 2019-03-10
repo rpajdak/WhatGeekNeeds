@@ -258,6 +258,11 @@ button.hamburger-menu-icon {
   padding: 0;
 }
 
+.navigation-list a {
+  margin: 0;
+  padding: 0;
+}
+
 .navigation-list li {
   list-style: none;
   border-top: 1px solid #aeeb73;
@@ -286,7 +291,6 @@ button.hamburger-menu-icon {
 a {
   color: #ffffff;
   font-family: "Suprema";
-  margin-left: 20px;
   font-size: 14px;
 }
 
@@ -458,7 +462,6 @@ a {
   font-size: 8px;
   text-align: end;
   margin-right: 4px;
-  margin-top: 20px;
 }
 
 .section-blog-container::after {
@@ -723,6 +726,10 @@ label:before {
   .show-more p {
     font-size: 38px;
   }
+  .show-more a {
+    margin: 0;
+    padding: 0;
+  }
   .show-more img {
     width: 100px;
     height: 100px;
@@ -968,6 +975,14 @@ img.pointer {
   font-size: 24px;
 }
 
+.size {
+  border: 2px solid #f0eeee;
+}
+
+.highlighted {
+  border: 1px solid #6cda00;
+}
+
 .item-sizes,
 .item-variants {
   display: -webkit-box;
@@ -986,7 +1001,6 @@ img.pointer {
 .item-variants li {
   width: 60px;
   height: 60px;
-  border: 2px solid #f0eeee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1092,10 +1106,6 @@ img.pointer {
   height: 8px;
   background-color: #058325;
   border-radius: 50%;
-}
-
-.item-sizes li:active {
-  border: 1px solid #6cda00;
 }
 
 .item-description-container li:hover {
@@ -1236,13 +1246,11 @@ ul.similiar-items-list {
 }
 
 /* Sort and filter menu */
-.sort-filter-option-container {
-  position: absolute;
-  width: 110vw;
-  top: -10%;
-  left: -20px;
+.active-fade {
   opacity: 0.35;
-  background-color: #000;
+  display: block;
+  z-index: 0;
+  position: relative;
 }
 
 .sort-filter-option {
@@ -1256,6 +1264,8 @@ ul.similiar-items-list {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #363636;
+  opacity: 1;
+  z-index: 1002;
 }
 
 .sort-filter-option h2 {
@@ -1340,7 +1350,6 @@ ul.similiar-items-list {
 }
 
 .checkbox-input-sort:checked + label:before {
-  content: "\2713";
   font-size: 10px;
   line-height: 15px;
   background-color: #6cda00;
@@ -1612,42 +1621,24 @@ ul.similiar-items-list {
 }
 
 .basket-container {
-  margin: 5px;
   color: #363636;
-}
-
-.basket-container h1 {
-  font-size: 14px;
-}
-
-.basket-container span {
-  font-size: 6px;
-  display: block;
-  margin: 6px auto;
 }
 
 .basket-container a {
   color: #363636;
   margin: 0;
-  font-size: 6px;
+  font-size: 8px;
   font-family: "Suprema - Semi Bold";
 }
 
-.basket-container input {
-  width: 95%;
-  height: 30px;
-  background-color: #f0eeee;
-  -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-  padding: 8px;
-  color: #363636;
-  font-family: "Suprema";
-  font-weight: 300;
-  margin: 5px 0;
+.chosen-items span {
+  font-size: 6px;
+  display: block;
+  margin: 6px auto;
 }
 
-.basket-container ::-webkit-input-placeholder {
-  color: #b4b3b3;
+.chosen-items h1 {
+  font-size: 14px;
 }
 
 .item-name-variant {
@@ -1692,6 +1683,7 @@ ul.similiar-items-list {
   font-weight: 400;
   font-family: "Suprema - Semi Bold";
   font-size: 12px;
+  text-align: end;
 }
 
 .items ol {
@@ -1724,6 +1716,7 @@ ul.similiar-items-list {
 .items ol li:before {
   content: counter(item) "  ";
   counter-increment: item;
+  color: red;
 }
 
 .items ol p {
@@ -1735,6 +1728,7 @@ ul.similiar-items-list {
 .btn-edit {
   font-size: 8px;
   height: 16px;
+  margin: 0;
 }
 
 .address-data,
@@ -1769,13 +1763,77 @@ ul.similiar-items-list {
   margin: 5px;
 }
 
+.address-data input,
+.invoice input {
+  width: 95%;
+  height: 30px;
+  background-color: #f0eeee;
+  -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  color: #363636;
+  font-family: "Suprema";
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.address-data ::-webkit-input-placeholder,
+.invoice ::-webkit-input-placeholder {
+  color: #b4b3b3;
+}
+
+.final-price > div {
+  width: 50%;
+}
+
+.big-span {
+  font-size: 20px;
+}
+
+.final-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Suprema - Semi Bold";
+  font-weight: 400;
+  color: #363636;
+  text-transform: uppercase;
+  margin: 5px auto;
+}
+
+.final-price span {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  line-height: 8px;
+}
+
+.final-price p {
+  font-size: 8px;
+  line-height: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.final-price h1 {
+  font-family: "Suprema - Extra Bold";
+  font-style: italic;
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 32px;
+}
+
 /*Tablets */
 @media (min-width: 768px) {
   .item-price-basket {
     font-size: 16px;
   }
   .item-price-basket span {
-    margin: 10px 5px;
+    margin: 10px auto;
     font-size: 8px;
   }
   .item-name {
@@ -1854,7 +1912,6 @@ ul.similiar-items-list {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  border: 1px solid black;
 }
 
 .payment-way label {
@@ -1863,6 +1920,7 @@ ul.similiar-items-list {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 6px;
+  font-size: 7px;
 }
 
 .payment-way label img {
@@ -1875,6 +1933,12 @@ ul.similiar-items-list {
 .agreement label {
   width: 100%;
   margin: 6px;
+  font-size: 6px;
+}
+
+.payment-way label,
+.agreement label {
+  font-family: "Suprema";
 }
 
 .payment-way label:before,
@@ -1893,5 +1957,187 @@ ul.similiar-items-list {
 
 .green-checkbox:checked + label:before {
   background-color: #6cda00;
+}
+
+@media (min-width: 768px) {
+  .payment-container h1 {
+    font-size: 18px;
+  }
+  .payment-container span {
+    font-size: 10px;
+  }
+  .payment-container a {
+    font-size: 8px;
+  }
+  .payment-container p {
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+  }
+  .payment-container img {
+    height: 12px;
+  }
+  .payment-way span {
+    font-size: 9px;
+  }
+  .payment-way label {
+    font-size: 9px;
+  }
+  .agreement label {
+    font-size: 8px;
+  }
+}
+
+.delivery-container h1 {
+  font-size: 14px;
+}
+
+.delivery-container span {
+  font-family: "Suprema - Semi Bold";
+  font-size: 6px;
+  color: #363636;
+}
+
+.delivery-container a {
+  font-family: "Suprema - Semi Bold";
+  color: #363636;
+  font-size: 8px;
+}
+
+.delivery-way-price {
+  display: inline;
+  font-size: 12px;
+  font-family: "Suprema - Semi Bold";
+  text-align: end;
+}
+
+.delivery-way-price span {
+  font-size: 10px;
+}
+
+.delivery-way span {
+  width: 100%;
+  height: 2vh;
+  background-color: #058325;
+  color: #ffffff;
+  display: block;
+  font-size: 7px;
+  font-weight: 400;
+  padding-left: 5px;
+  line-height: 13px;
+}
+
+.delivery-way label {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% auto 16%;
+      grid-template-columns: 10% auto 16%;
+  margin: 20px auto;
+  font-size: 7px;
+  width: 100%;
+  height: 100%;
+  font-family: "Suprema";
+}
+
+.delivery-way label p {
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+
+.delivery-way label p span {
+  padding: 0;
+  font-size: 7px;
+  display: inline;
+  color: #363636;
+  background-color: transparent;
+}
+
+.delivery-way label::before {
+  background-color: #ffffff;
+  top: 8%;
+}
+
+img {
+  width: 100%;
+}
+
+.items-selected input {
+  width: 95%;
+  height: 30px;
+  background-color: #f0eeee;
+  -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  color: #363636;
+  font-family: "Suprema";
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.items-selected ::-webkit-input-placeholder {
+  color: #b4b3b3;
+}
+
+.items-selected ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.items-selected ol li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 15% 60% 10%;
+      grid-template-columns: 5% 15% 60% 10%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 10px auto;
+}
+
+.items-selected ol li img {
+  width: 90%;
+}
+
+.items-selected ol li a {
+  margin: 0;
+  padding: 0;
+}
+
+.items-selected ol li:before {
+  content: counter(item) "  ";
+  counter-increment: item;
+  font-weight: 400;
+  color: #363636;
+  font-family: "Suprema - Semi Bold";
+}
+
+@media (min-width: 768px) {
+  .delivery-container span {
+    font-size: 12px;
+  }
+  .delivery-container a {
+    font-size: 12px;
+  }
+  .delivery-way p {
+    font-size: 16px;
+  }
+  .delivery-way span {
+    font-size: 12px;
+    line-height: 24px;
+    height: 4vh;
+  }
+  .delivery-way img {
+    width: 72px;
+    height: 40px;
+  }
+  .delivery-way label p span {
+    font-size: 12px;
+  }
+  .delivery-way label::before {
+    top: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

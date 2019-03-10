@@ -73,6 +73,14 @@
     }
 }
 
+.size {
+    border: 2px solid #f0eeee;
+}
+
+.highlighted {
+    border: 1px solid $light-green;
+}
+
 .item-sizes,
 .item-variants {
     @include flex(space-evenly, center);
@@ -81,7 +89,6 @@
     li {
         width: 60px;
         height: 60px;
-        border: 2px solid #f0eeee;
         @include flex(center, center);
         color: #999898;
         font-weight: 800;
@@ -159,9 +166,7 @@
     border-radius: 50%;
 }
 
-.item-sizes li:active {
-    border: 1px solid $light-green;
-}
+
 
 .item-description-container li:hover {
     background-color: $dark-green;
@@ -187,6 +192,7 @@ ul.similiar-items-list {
     .main-photo {
         @include flex(center, center);
         height: 70vh;
+
         img {
             width: 50%;
             height: 80%;

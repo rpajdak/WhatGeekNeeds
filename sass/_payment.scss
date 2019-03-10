@@ -54,7 +54,6 @@
         line-height: 20px;
         display: inline-flex;
         position: relative;
-        border: 1px solid black;
 
     }
 
@@ -62,7 +61,7 @@
         width: 100%;
         display: inline-flex;
         margin: 6px;
-
+        font-size: 7px;
         img {
             width: 40px;
             height: 20px;
@@ -78,11 +77,16 @@
     label {
         width: 100%;
         margin: 6px;
+        font-size: 6px;
     }
 }
 
 .payment-way,
 .agreement {
+    label {
+        font-family: $secondary-font;
+    }
+
     label:before {
         background-color: #ffffff;
         bottom: 1px;
@@ -98,5 +102,49 @@
 }
 
 .green-checkbox:checked+label:before {
-   background-color: $light-green;
-}   
+    background-color: $light-green;
+}
+
+@media(min-width:768px) {
+    .payment-container {
+        h1 {
+            font-size: 18px;
+        }
+
+        span {
+            font-size: 10px;
+        }
+
+        a {
+            font-size: 8px;
+        }
+
+        p {
+            font-size: 12px;
+            height: 12px;
+            line-height: 12px;
+        }
+        img { 
+            height: 12px;
+        }
+
+    }
+
+    .payment-way {
+        span {
+            font-size: 9px;
+           
+        }
+
+        label {
+
+            font-size: 9px;
+        }
+
+    }
+    .agreement{
+        label{
+            font-size: 8px;
+        }
+    }
+}

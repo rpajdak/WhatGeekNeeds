@@ -145,6 +145,10 @@ button.hamburger-menu-icon {
     ul {
         margin: 0;
         padding: 0;
+    }   
+    a{
+        margin:0;
+        padding: 0;
     }
 
     li {
@@ -176,7 +180,6 @@ button.hamburger-menu-icon {
 a {
     color: #ffffff;
     font-family: "Suprema";
-    margin-left: 20px;
     font-size: 14px;
 }
 
@@ -316,7 +319,6 @@ a {
         font-size: 8px;
         text-align: end;
         margin-right: 4px;
-        margin-top: 20px;
     }
 }
 
@@ -555,7 +557,10 @@ label:before {
         p {
             font-size: 38px;
         }
-
+        a{
+            margin: 0;
+            padding: 0;
+        }
         img {
             width: 100px;
             height: 100px;
