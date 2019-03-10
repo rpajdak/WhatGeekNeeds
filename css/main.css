@@ -1782,15 +1782,20 @@ ul.similiar-items-list {
   color: #b4b3b3;
 }
 
-.final-price > div {
-  width: 50%;
-}
-
 .big-span {
   font-size: 20px;
 }
 
-.final-price {
+.final-price > div {
+  width: 50%;
+}
+
+.final-price-with-code > div {
+  width: 50%;
+}
+
+.final-price,
+.final-price-with-code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1801,30 +1806,50 @@ ul.similiar-items-list {
   font-weight: 400;
   color: #363636;
   text-transform: uppercase;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 
-.final-price span {
+.final-price span,
+.final-price-with-code span {
   display: inline;
   margin: 0;
   padding: 0;
   line-height: 8px;
 }
 
-.final-price p {
+.final-price p,
+.final-price-with-code p {
   font-size: 8px;
   line-height: 8px;
   margin: 0;
   padding: 0;
 }
 
-.final-price h1 {
+.final-price h1,
+.final-price-with-code h1 {
   font-family: "Suprema - Extra Bold";
-  font-style: italic;
   font-size: 32px;
   margin: 0;
   padding: 0;
   line-height: 32px;
+}
+
+.old-price {
+  display: block;
+  position: relative;
+  font-family: "Suprema - Extra Bold";
+}
+
+.old-price::before {
+  border-bottom: 1px solid red;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 40%;
+}
+
+.save-pln {
+  color: #e82222;
 }
 
 /*Tablets */
@@ -1853,6 +1878,27 @@ ul.similiar-items-list {
   .btn-edit {
     height: 40px;
     font-size: 14px;
+  }
+  .final-price span,
+  .final-price-with-code span {
+    line-height: 12px;
+  }
+  .final-price p,
+  .final-price-with-code p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .final-price h1,
+  .final-price-with-code h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .old-price::before {
+    border-bottom: 1px solid red;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
   }
 }
 
