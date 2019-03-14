@@ -14,6 +14,7 @@
   src: url("../fonts/SupremaExtraBold.ttf");
 }
 
+/* mixins for menu on desktop */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -78,6 +79,7 @@ button, input {
 }
 
 .header-user-login,
+.header-user-login-desktop,
 .navigation-user {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -95,6 +97,7 @@ button, input {
 }
 
 .header-user-login p,
+.header-user-login-desktop p,
 .navigation-user p {
   display: inline;
   font-size: 10px;
@@ -105,6 +108,7 @@ button, input {
 }
 
 .header-user-login a,
+.header-user-login-desktop a,
 .navigation-user a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +122,10 @@ button, input {
   margin-top: 3px;
 }
 
+.header-user-login-desktop {
+  display: none;
+}
+
 .user-icon-image {
   margin-right: 3px;
   margin-bottom: 3px;
@@ -129,6 +137,10 @@ button.hamburger-menu-icon {
   width: 24px;
   height: 16px;
   margin-top: 6px;
+}
+
+.header-search-form-desktop {
+  display: none;
 }
 
 .header-search-form {
@@ -203,6 +215,10 @@ button.hamburger-menu-icon {
 }
 
 /* Navigation*/
+.navigation-desktop {
+  display: none;
+}
+
 .navigation {
   display: block;
   position: absolute;
@@ -324,6 +340,10 @@ a {
 .section-banner-container a {
   padding: 0;
   margin: 0;
+}
+
+.top-product {
+  display: none;
 }
 
 /* Section products list */
@@ -610,6 +630,7 @@ label:before {
 
 /* Section footer */
 .footer-container {
+  display: block;
   margin-top: 10px;
   margin-left: -9px;
   width: 100vw;
@@ -683,7 +704,7 @@ label:before {
 
 /* Tablets */
 @media (min-width: 768px) {
-  /* Header Section */
+  /* Section header */
   .user-login-icon a {
     font-size: 18px;
   }
@@ -792,12 +813,338 @@ label:before {
     height: auto;
   }
   .social-media {
-    font-size: 20px;
+    font-size: 20px !important;
     margin-right: 8px;
   }
   .social-media img {
     width: 40px;
     height: 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  /* Section header */
+  header,
+  section,
+  article,
+  footer {
+    width: 1200px;
+    margin: 20px auto;
+  }
+  .header-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 10vh;
+        grid-template-rows: 10vh;
+    grid-gap: 16px 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-logo img {
+    width: auto;
+    height: 80px;
+    margin: 0;
+  }
+  .header-user-login-desktop > div {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .header-user-login-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-user-login-desktop a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header-user-login-desktop input {
+    background-color: #f0eeee;
+    -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    color: #b4b3b3;
+    font-family: "Suprema - Extra Bold";
+    font-weight: 300;
+    height: 32px;
+    width: 90px;
+    margin: 0;
+    padding: 0;
+  }
+  .header-user-login-desktop button {
+    color: #ffffff;
+    width: 200px;
+    height: 32px;
+    background-color: #6cda00;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto 0;
+  }
+  .header-user-login-desktop button img {
+    margin-right: 6px;
+    width: 30px;
+    height: auto;
+  }
+  .header-user-login-desktop p {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .desktop-login-basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .price-basket {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .price-basket input {
+    width: 160px;
+    padding-left: 6px;
+  }
+  .price-basket button {
+    font-family: "Suprema - Semi Bold";
+    font-size: 18px;
+  }
+  .header-search-form-desktop {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header-search-form-desktop input {
+    width: 66.6%;
+    height: 40px;
+    background-color: #f0eeee;
+    -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    color: #b4b3b3;
+    font-family: "Suprema - Extra Bold";
+    font-weight: 300;
+  }
+  .header-search-form-desktop input::-webkit-input-placeholder {
+    color: #b4b3b3;
+    font-family: "Suprema";
+    font-size: 14px;
+  }
+  .header-search-form-desktop input:-ms-input-placeholder {
+    color: #b4b3b3;
+    font-family: "Suprema";
+    font-size: 14px;
+  }
+  .header-search-form-desktop input::-ms-input-placeholder {
+    color: #b4b3b3;
+    font-family: "Suprema";
+    font-size: 14px;
+  }
+  .header-search-form-desktop input::placeholder {
+    color: #b4b3b3;
+    font-family: "Suprema";
+    font-size: 14px;
+  }
+  .header-search-form-desktop button {
+    height: 40px;
+    background-color: #058325;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Suprema - Semi Bold";
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .header-search-form-desktop button img {
+    width: 25px;
+    height: auto;
+  }
+  /* Navigation on desktop */
+  .navigation-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #6cda00;
+  }
+  .main {
+    position: relative;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1200px;
+    margin: auto 20px;
+    z-index: 4;
+  }
+  .main a {
+    font-weight: 400;
+    font-family: "Suprema";
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .main li {
+    position: relative;
+    width: 20%;
+    padding: 15px 0;
+    cursor: pointer;
+    z-index: 5;
+    text-align: center;
+  }
+  li {
+    margin: 0;
+  }
+  .drop {
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    left: 0;
+    top: 40px;
+    z-index: 10;
+  }
+  .drop a {
+    font-size: 12px;
+  }
+  .drop div {
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transition: all 0.5s 0.1s;
+    transition: all 0.5s 0.1s;
+    position: relative;
+    background-color: rgba(108, 218, 0, 0.7);
+    margin-top: 5px;
+    padding: 5px;
+    height: 150px;
+  }
+  .drop li {
+    display: block;
+    padding: 6px;
+    width: 100%;
+  }
+  .main li:nth-child(1):hover ul div {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  .main li:nth-child(2):hover ul div {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  .main li:nth-child(3):hover ul div {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  .main li:nth-child(4):hover ul div {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  .banner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 16px 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 90px auto;
+  }
+  .top-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top-product img {
+    height: 80%;
+  }
+  /* Section hidden on desktop */
+  .header-user-login {
+    display: none;
+  }
+  .header-search-form {
+    display: none;
+  }
+  .newsletter-container {
+    display: none;
+  }
+  .footer-container {
+    display: none !important;
   }
 }
 
@@ -1598,26 +1945,6 @@ ul.similiar-items-list {
     width: 100px;
     height: 100px;
   }
-  /* Section footer */
-  .footer-container {
-    height: 64px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .copyright-text {
-    font-size: 16px;
-    line-height: 4px;
-    height: auto;
-  }
-  .social-media {
-    font-size: 20px;
-    margin-right: 8px;
-  }
-  .social-media img {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 .basket-container {
@@ -1780,6 +2107,11 @@ ul.similiar-items-list {
 .address-data ::-webkit-input-placeholder,
 .invoice ::-webkit-input-placeholder {
   color: #b4b3b3;
+}
+
+.address-data label:before,
+.invoice label:before {
+  background-color: #ffffff;
 }
 
 .big-span {

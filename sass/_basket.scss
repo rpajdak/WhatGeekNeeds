@@ -157,6 +157,9 @@
     ::-webkit-input-placeholder {
         color: $input-font-color;
     }
+    label:before{
+        background-color: $primary-white;
+    }
 }
 
 .big-span {

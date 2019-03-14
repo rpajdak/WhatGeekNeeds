@@ -9,22 +9,39 @@
     font-family: $secondary-font;
     font-size: 14px;
 }
-@mixin products-list($columns, $rows) {
+
+@mixin grid($columns, $rows) {
     display: grid;
     grid-template-columns: $columns;
     grid-template-rows: $rows;
     grid-gap: 16px 8px;
     justify-content: center;
 }
-@mixin containerRulesForText {
-      color: $primary-font-color;
-      margin: 0;
 
-      h1 {
-          font-size: 14px;
-          font-family: "Suprema - Semi Bold";
-          font-weight: 400;
-          padding: 0;
-          margin: 0;
-      }
+@mixin containerRulesForText {
+    color: $primary-font-color;
+    margin: 0;
+
+    h1 {
+        font-size: 14px;
+        font-family: "Suprema - Semi Bold";
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* mixins for menu on desktop */
+@mixin transform($value) {
+    -webkit-transform: ($value);
+    -moz-transform: ($value);
+    -ms-transform: ($value);
+    transform: ($value);
+}
+
+@mixin transition($value) {
+    -webkit-transition: ($value);
+    -moz-transition: ($value);
+    -ms-transition: ($value);
+    transition: ($value);
 }
