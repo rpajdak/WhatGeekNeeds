@@ -212,6 +212,12 @@ a {
 }
 
 /*Section blog */
+
+/* Section hidden on small devices */
+.slider-top-product {
+    display: none;
+}
+
 .section-banner-container {
     @include flex(center, center);
 
@@ -242,6 +248,7 @@ a {
 }
 
 .item-box {
+    height: 100%;
     width: 100%;
     font-size: 6px;
     text-align: center;
@@ -268,6 +275,7 @@ a {
 .item-name-price {
     background-color: #f0eeee;
     height: 20%;
+    width: 100%;
     color: $primary-font-color;
     margin: 2px 0 0 0;
 
@@ -550,7 +558,7 @@ label:before {
     }
 
     .item-image {
-        height: 85%;
+        height: 80%;
     }
 
     .item-image img {
@@ -559,7 +567,7 @@ label:before {
     }
 
     .item-name-price {
-        height: 15%;
+        height: 20%;
 
         h3 {
             font-size: 18px;
@@ -670,17 +678,12 @@ label:before {
             height: 40px;
         }
     }
-
-
 }
 
 /* Desktop */
+
+
 @media (min-width: 992px) {
-
-
-
-
-    /* Section header */
 
     header,
     section,
@@ -690,8 +693,16 @@ label:before {
         margin: 20px auto;
     }
 
+
+    /* Section header */
+
+    header {
+        height: 160px;
+    }
+
+
     .header-container {
-        @include grid(repeat(2, 1fr), 10vh);
+        @include grid(repeat(2, 1fr), auto);
 
     }
 
@@ -811,7 +822,7 @@ label:before {
 
     .navigation-desktop {
         @include flex(center, center);
-        width: 100%;;
+        width: 100%;
         position: absolute;
         left: 0;
         background: $light-green;
@@ -854,28 +865,30 @@ label:before {
         position: absolute;
         padding: 0;
         width: 100%;
-        height: 200px;
         left: 0;
-        top: 40px;
-        z-index: 10;
+        top: 35px;
+        z-index: 100;
+        margin-top: 15px;
+
         a {
             font-size: 12px;
         }
 
         div {
-            @include transform(translate(0, -100%));
+            @include transform(translate(0, -150%));
             @include transition(all 0.5s 0.1s);
             position: relative;
             background-color: rgba(108, 218, 0, 0.7);
-            margin-top: 5px;
+            margin-top: 13px;
             padding: 5px;
-            height: 150px;
+            height: 170px;
         }
 
         li {
             display: block;
             padding: 6px;
             width: 100%;
+            height: 40px;
         }
     }
 
@@ -888,19 +901,181 @@ label:before {
         }
     }
 
-    .banner {
-        @include grid((2fr 1fr), auto);
-        margin: 90px auto;
+    /* Section banner */
+
+    .slider-top-product {
+        height: 500px;
+        @include grid(repeat(2, 1fr), auto);
+        margin-top: 30px;
+        align-items: flex-end;
+        justify-content: space-between;
     }
+
+    /* Slider */
+
+
+    #i1,
+    #i2,
+    #i3 {
+        display: none !important;
+    }
+
+    .slider-container {
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 38%;
+        user-select: none;
+        width: 790px;
+        height: 480px;
+        z-index: 1;
+
+        label::before {
+            display: none;
+        }
+    }
+
+    .slide_img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+
+    .nav_slide {
+        width: 100%;
+        bottom: 12px;
+        height: 11px;
+        position: absolute;
+        text-align: center;
+        z-index: 99;
+        cursor: default;
+    }
+
+    .dots {
+        top: -5px;
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+        position: relative;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #303030;
+        transition: .4s;
+        padding: 0;
+    }
+
+    .dots:hover {
+        cursor: pointer;
+        background-color: #898888;
+        transition: .25s
+    }
+
+    .slide_img {
+        z-index: -1;
+    }
+
+    #i1:checked~#one,
+    #i2:checked~#two,
+    #i3:checked~#three,
+    #i4:checked~#four,
+    #i5:checked~#five {
+        z-index: 9;
+        animation: scroll 1s ease-in-out;
+    }
+
+    #i1:checked~.nav_slide #dot1,
+    #i2:checked~.nav_slide #dot2,
+    #i3:checked~.nav_slide #dot3,
+    #i4:checked~.nav_slide #dot4,
+    #i5:checked~.nav_slide #dot5 {
+        background-color: #898888;
+        ;
+    }
+
+    /*--              --*/
+
 
     .top-product {
         @include flex (center, center);
+        width: 100%;
+        height: 480px;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
     }
 
-    .top-product {
-        img {
-            height: 80%;
+    .top-product-text {
+        position: absolute;
+        width: 200px !important;
+        height: 40px !important;
+        top: 40px;
+        left: -7px;
+    }
+
+    .item-name-price {
+        h3 {
+            width: 100%;
+            height: 50%;
+            ;
         }
+    }
+
+    .top-product-price {
+        width: 100%;
+        height: 50%;
+        @include flex(flex-end, flex-end);
+    }
+
+    .top-product-price-new {
+        color: #e82222;
+        margin: 0 6px;
+
+        line-height: 35px;
+
+        p {
+            font-size: 35px !important;
+        }
+
+        span {
+            font-size: 24px !important;
+        }
+    }
+
+    .top-product-price-old {
+        display: block;
+        position: relative;
+        font-size: 24px !important;
+        line-height: 24px;
+    }
+
+    .top-product-price-old::before {
+        border-bottom: 2px solid red;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 40%;
+    }
+
+    /* Section products list */
+    .products-list{
+        display: none;
+    }
+    .products-list-desktop {
+        width: 100%;
+        @include grid(repeat(4, 25%), repeat(2, 380px));
+    }
+
+    .item-name-price p {
+        font-size: 35px;
+        line-height: 35px;
     }
 
     /* Section hidden on desktop */
@@ -911,6 +1086,10 @@ label:before {
 
     .header-search-form {
         display: none;
+    }
+
+    .section-banner-container {
+        display: none !important;
     }
 
     .newsletter-container {
