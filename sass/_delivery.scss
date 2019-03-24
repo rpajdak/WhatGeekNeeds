@@ -1,17 +1,37 @@
 .delivery-container {
+        margin: 0 9px;
     h1{
             font-size: 14px;
+            font-family: $semi-bold;
     }
     span {
         font-family: $semi-bold;
         font-size: 6px;
         color: $primary-font-color;
+        margin: 6px auto;
     }
 
     a {
         font-family: $semi-bold;
         color: $primary-font-color;
         font-size: 8px;
+    }
+    img{
+        display: block;
+        height: 10px;
+        width: auto;
+        margin-right: 5px;
+    }
+    p{
+            color: #363636;
+            font-family: "Suprema - Semi Bold";
+            font-size: 10px;
+            width: 80%;
+            height: 10px;
+            line-height: 10px;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
     }
 }
 
@@ -31,7 +51,7 @@
 
     span {
         width: 100%;
-        height: 2vh;
+        height: 13px;
         background-color: $dark-green;
         color: #ffffff;
         display: block;
@@ -108,6 +128,7 @@ img {
 
             img {
                 width: 90%;
+                height: auto;
             }
 
             a {

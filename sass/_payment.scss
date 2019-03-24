@@ -1,18 +1,21 @@
 .payment-container {
+    margin: 0 9px;
+
     h1 {
         font-size: 14px;
+        font-family: $semi-bold;
     }
 
     span {
+        font-family: $semi-bold;
         font-size: 6px;
-        display: block;
+        color: $primary-font-color;
         margin: 6px auto;
     }
 
     a {
         color: $primary-font-color;
-        margin: 0;
-        font-size: 6px;
+        font-size: 8px;
         font-family: $semi-bold;
     }
 
@@ -31,6 +34,9 @@
         height: 10px;
         width: auto;
         margin-right: 5px;
+    }
+    input{
+        display: none;
     }
 }
 
@@ -59,9 +65,10 @@
 
     label {
         width: 100%;
-        display: inline-flex;
+        @include flex(flext-start, center);
         margin: 6px;
         font-size: 7px;
+
         img {
             width: 40px;
             height: 20px;
@@ -97,7 +104,7 @@
         left: 0;
         top: 0;
         position: absolute;
-        border: 2px solid #59b201;
+        border: 2px solid #6cda00;
     }
 }
 
@@ -124,7 +131,8 @@
             height: 12px;
             line-height: 12px;
         }
-        img { 
+
+        img {
             height: 12px;
         }
 
@@ -133,7 +141,7 @@
     .payment-way {
         span {
             font-size: 9px;
-           
+
         }
 
         label {
@@ -142,8 +150,9 @@
         }
 
     }
-    .agreement{
-        label{
+
+    .agreement {
+        label {
             font-size: 8px;
         }
     }

@@ -1,5 +1,6 @@
 .contact-container {
     @include containerRulesForText;
+    margin: 0 9px;
 }
 
 
@@ -38,7 +39,7 @@
     p {
         display: flex;
         align-items: center;
-        margin-top: 3px;
+        margin: 12px auto;
         line-height: 10px;
     }
 }

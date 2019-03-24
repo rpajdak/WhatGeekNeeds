@@ -1,5 +1,6 @@
 .faq-container {
     @include containerRulesForText;
+    margin: 0 9px;
 }
 
 .faq-btn {

@@ -3,15 +3,18 @@ const hamburderBtn = document.querySelector(".hamburger-menu-icon");
 const navDiv = document.querySelector(".navigation");
 const crossBtn = document.querySelector(".hamburger-menu-icon-visible");
 
-function openNav() {
-    navDiv.style.transform = "translateY(-100vh)";
-}
-crossBtn.addEventListener("click", openNav);
-
 function closeNav() {
-    navDiv.style.transform = "translateY(100vh)"
+    navDiv.style.transform = "translateY(-100vh)";
+    document.body.style.overflow = "auto";
+
 }
-hamburderBtn.addEventListener("click", closeNav);
+crossBtn.addEventListener("click", closeNav);
+
+function openNav() {
+    navDiv.style.transform = "translateY(100vh)"
+    document.body.style.overflow = "hidden";
+}
+hamburderBtn.addEventListener("click", openNav);
 
 
 
@@ -35,6 +38,19 @@ function changeThumbnails() {
     });
 }
 
+// Function that changes bordes on thumbnail
+function highlightThumbnail() {
+    const thmbImg = document.querySelectorAll(".thumbnails_img")
+    for (let i = 0; i < thmbImg.length; i++) {
+        thmbImg[i].addEventListener("click", () => {
+            for (let i = 0; i < thmbImg.length; i++) {
+                thmbImg[i].classList.remove("highlighted")
+            }
+            thmbImg[i].classList.add("highlighted");
+        })
+
+    }
+}
 
 // Show/hide faq paragraph
 function showHideParagraph() {
@@ -63,29 +79,29 @@ const sortMenuOpenBtn = document.querySelector(".sort-filter");
 const sortMenuCloseBtn = document.querySelector(".close-menu");
 const sortMenuDiv = document.querySelector(".sort-filter-option");
 const fadeDiv = document.querySelector(".fade")
-let body = document.body,
-    html = document.documentElement;
+const body = document.body;
 
-let height = Math.max(body.scrollHeight, body.offsetHeight,
-    html.clientHeight, html.scrollHeight, html.offsetHeight);
+
 /* Open menu */
 function openCloseSortMenu() {
     sortMenuOpenBtn.addEventListener("click", () => {
         sortMenuDiv.classList.remove("hide");
         fadeDiv.classList.toggle("active-fade");
-
-    })
+        document.body.style.overflow = "hidden";
+    });
     /* Close menu */
+
     sortMenuCloseBtn.addEventListener("click", () => {
         sortMenuDiv.classList.add("hide");
         fadeDiv.classList.toggle("active-fade");
+        document.body.style.overflow = "auto"
     })
 }
 /* Change thumbnails on item page */
+
+
 function highlightSize() {
-
-
-    const sizes = document.querySelectorAll(".size")
+    const sizes = document.querySelectorAll(".size-variant")
     for (let i = 0; i < sizes.length; i++) {
         sizes[i].addEventListener("click", () => {
             for (let i = 0; i < sizes.length; i++) {
@@ -97,16 +113,14 @@ function highlightSize() {
     }
 }
 
-function borderChange() {
-
-
-    const sqr = document.querySelectorAll(".kwadrat");
-    for (let i = 0; i < sqr.length; i++) {
-        sqr[i].addEventListener("click", () => {
-            for (let i = 0; i < sqr.length; i++) {
-                sqr[i].classList.remove("red")
-            }
-            sqr[i].classList.add("red");
-        })
-    }
-}
+// function borderChange() {
+//     const sqr = document.querySelectorAll(".kwadrat");
+//     for (let i = 0; i < sqr.length; i++) {
+//         sqr[i].addEventListener("click", () => {
+//             for (let i = 0; i < sqr.length; i++) {
+//                 sqr[i].classList.remove("red")
+//             }
+//             sqr[i].classList.add("red");
+//         })
+//     }
+// }

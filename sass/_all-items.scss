@@ -30,27 +30,37 @@
     z-index: 0;
     position: relative;
 }
+
 .sort-filter-option {
     width: 70%;
-    border: 6px solid #6cda00;
+    border: 3px solid #6cda00;
     background-color: #ffffff;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $primary-font-color;
     opacity: 1;
     z-index: 1002;
+
     h2 {
-        font-size: 14px
+        font-size: 14px;
+        margin: 12px auto;
+        font-family:$semi-bold;
     }
 
     h3 {
         margin: 5px auto 5px 10px;
         font-size: 8px;
     }
-
+    ul{
+        li{
+            input{
+                display: none;
+            }
+        }
+    }
     li {
         @include flex(flex-start, center);
         margin-top: 2px;
@@ -88,7 +98,7 @@
         padding: 5px;
         color: $primary-font-color;
         font-size: 12px;
-
+        margin-top: 12px;
         &::placeholder {
             color: $input-font-color;
             ;
@@ -105,11 +115,12 @@
 
 .btn {
     width: 100%;
-    height: 24px;
+    height: 32px;
     background-color: #6cda00;
     margin: 10px auto;
     color: #ffffff;
     font-size: 16px;
+    line-height: 8px;
     font-family: "Suprema";
 }
 
@@ -122,9 +133,8 @@
     border-radius: 50%;
 }
 
-
 .products-list {
-    width: 100%;
+
     @include grid(repeat(2, 48%), repeat(auto, 200px));
 
 }
@@ -203,7 +213,6 @@
 
 .footer-container {
     margin-top: 10px;
-    margin-left: -9px;
     width: 100vw;
     height: 42px;
     background: center/cover no-repeat url(../img/footer/płyta_głowna.png),
@@ -320,5 +329,5 @@
 
     }
 
-    
+
 }

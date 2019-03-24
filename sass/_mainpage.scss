@@ -1,6 +1,6 @@
 /* Section header */
 .header-container {
-    width: 100%;
+    margin: 0 9px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -211,7 +211,10 @@ a {
     border-bottom: 1px solid #aeeb73;
 }
 
-/*Section blog */
+/*Section banner */
+.section-banner-container {
+    margin: 0 9px;
+}
 
 /* Section hidden on small devices */
 .slider-top-product {
@@ -234,17 +237,38 @@ a {
 /* Section products list */
 
 .products-list-text {
+    margin: 0 9px;
 
     p {
         font-family: "Suprema - Semi Bold";
         font-size: 14px;
-        margin: 20px auto;
+        margin: 18px 6px;
     }
 }
 
 .products-list {
-    width: 100%;
+    margin: 0 9px;
     @include grid(repeat(2, 48%), repeat(3, 200px));
+}
+
+.products-list>div:last-child {
+    display: none;
+}
+
+.products-list>div:nth-child(7) {
+    display: none;
+}
+
+.products-list>div:nth-child(8) {
+    display: none;
+}
+
+.products-list>div:nth-child(9) {
+    display: none;
+}
+
+.products-list-desktop {
+    display: none;
 }
 
 .item-box {
@@ -262,7 +286,7 @@ a {
 }
 
 .item-image {
-    height: 80%;
+    height: 83%;
     @include flex(center, center);
     margin: auto;
 
@@ -274,7 +298,7 @@ a {
 
 .item-name-price {
     background-color: #f0eeee;
-    height: 20%;
+    height: 17%;
     width: 100%;
     color: $primary-font-color;
     margin: 2px 0 0 0;
@@ -322,7 +346,7 @@ a {
 /* Section blog */
 .section-blog-container {
     height: 136px;
-    width: 100%;
+    margin: 0 9px;
     position: relative;
 
     img {
@@ -363,8 +387,7 @@ a {
 
 /* Section Newsletter */
 .newsletter-container {
-    margin-left: -9px;
-    width: 100vw;
+    width: 100%;
     height: 163px;
     background-color: $light-green;
     font-family: "Suprema";
@@ -377,7 +400,7 @@ a {
 
     button {
         margin-left: 13px;
-        width: 50%;
+        width: 90%;
         height: 20%;
         background-color: #ffffff;
         font-family: "Suprema - Semi Bold";
@@ -387,21 +410,14 @@ a {
         text-transform: uppercase;
     }
 
-    img {
-        position: absolute;
-        top: 20px;
-        right: 16px;
-        width: 114px;
-        height: 114px;
-    }
-
     p {
         font-size: 14px;
         font-family: "Suprema - Semi Bold";
         color: #ffffff;
         display: block;
-        margin: 2px 0 0 9px;
+        margin: 6px 0 0 9px;
         padding: 0;
+        width: 100%;
     }
 
     input::placeholder {
@@ -409,8 +425,31 @@ a {
     }
 }
 
-.newsletter-input {
+.newsletter-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.newsletter-wrapper>div {
     width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.newsletter-image {
+    @include flex(center, center);
+
+    img {
+        width: 80%;
+    }
+}
+
+.newsletter-input {
+    width: 90%;
     height: 20%;
     box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.1);
     background-color: $newsletter-input-bgcol;
@@ -427,11 +466,16 @@ a {
     margin-left: 13px;
 
     label {
+        width: 180%;
         align-items: center;
         position: relative;
         padding-left: 25px;
         font-size: 5px;
         font-family: $secondary-font;
+    }
+
+    label:before {
+        border: 2px solid #59b201;
     }
 }
 
@@ -461,8 +505,9 @@ label:before {
     top: 0;
     position: absolute;
     text-align: center;
-    border: 2px solid #59b201;
+    border: 2px solid $light-green;
 }
+
 
 .checkbox-input:checked+label:before {
     content: "\2713";
@@ -473,10 +518,8 @@ label:before {
 /* Section footer */
 
 .footer-container {
-    display: block;
     margin-top: 10px;
-    margin-left: -9px;
-    width: 100vw;
+    width: 100%;
     height: 42px;
     background: center/cover no-repeat url(../img/footer/płyta_głowna.png),
         #058325;
@@ -524,7 +567,6 @@ label:before {
 
     .item-name-price p {
         font-size: 13px;
-        margin-top: 5px;
     }
 }
 
@@ -558,7 +600,7 @@ label:before {
     }
 
     .item-image {
-        height: 80%;
+        height: 83%;
     }
 
     .item-image img {
@@ -567,7 +609,7 @@ label:before {
     }
 
     .item-name-price {
-        height: 20%;
+        height: 17%;
 
         h3 {
             font-size: 18px;
@@ -626,7 +668,7 @@ label:before {
         height: 224px;
 
         p {
-            font-size: 20px;
+            font-size: 24px;
             margin-top: 10px;
         }
 
@@ -637,17 +679,11 @@ label:before {
         }
 
         img {
-            position: absolute;
-            top: 20px;
-            right: 50px;
-            width: 254px;
-            height: 172px;
-            position: absolute;
-            top: 20px;
-            right: 50px;
-            width: 254px;
-            height: 172px;
+            width: 60%;
+            height: auto;
+            margin-bottom: 18px;
         }
+
     }
 
     .newsletter-container-checkbox label {
@@ -1065,17 +1101,51 @@ label:before {
     }
 
     /* Section products list */
-    .products-list{
-        display: none;
-    }
-    .products-list-desktop {
-        width: 100%;
+    .products-list {
         @include grid(repeat(4, 25%), repeat(2, 380px));
+    }
+
+    .products-list>div:last-child {
+        display: block;
+    }
+
+    .products-list>div:nth-child(7) {
+        display: block;
+    }
+
+    .products-list>div:nth-child(8) {
+        display: block;
+    }
+
+    .products-list>div:nth-child(9) {
+        display: block;
+    }
+
+    .products-list-desktop {
+        display: none;
+        // @include grid(repeat(4, 25%), repeat(2, 380px));
     }
 
     .item-name-price p {
         font-size: 35px;
         line-height: 35px;
+    }
+
+    .show-more {
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 48px;
+            height: auto;
+        }
+
     }
 
     /* Section hidden on desktop */
@@ -1089,14 +1159,6 @@ label:before {
     }
 
     .section-banner-container {
-        display: none !important;
-    }
-
-    .newsletter-container {
-        display: none;
-    }
-
-    .footer-container {
         display: none !important;
     }
 

@@ -13,7 +13,7 @@
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <img src="img/header/logo.png" alt="Whatgeekneeds logo">
+                <a href="index.html"><img src="img/header/logo.png" alt="Whatgeekneeds logo"></a>
             </div>
             <div class="header-user-login">
                 <a href="#">
@@ -59,16 +59,20 @@
             <h1>Twój koszyk</h1>
             <span><a href="index.html">Strona główna ></a> <a href="#">1/3 Dane do wysyłki</a><a href="#">2/3 Opcje
                     dostawy</a></span>
-            <p><img src="img/payment/arrow.png" alt="Green arrow">2/3 opcje płatności</p>
+            <p><img src="img/payment/arrow.png" alt="Green arrow">2/3 OPCJE DOSTAWY</p>
             <div class="payment-way">
-                <span>1/3 Dane do wysyłki</span>
-                <input type="checkbox" id="payu" class="green-checkbox" />
+                <span>3/3 METODA PŁATNOŚĆI</span>
+
+                <input type="radio" name="one" id="payu" class="green-checkbox" />
                 <label for="payu"><img src="img/payment/payu_logo.png" alt="PayU log">PayU</label>
-                <input type="checkbox" id="paypal" class="green-checkbox" />
+
+                <input type="radio" name="one" id="paypal" class="green-checkbox" />
                 <label for="paypal"><img src="img/payment/paypal_logo.png" alt="PayU log">PayPal</label>
-                <input type="checkbox" id="cashondelivery" class="green-checkbox" />
+
+                <input type="radio" name="one" id="cashondelivery" class="green-checkbox" />
                 <label for="cashondelivery"><img src="img/payment/CASH_ON_DELIVERY.png" alt="PayU log">Płatność za
                     pobraniem <br>(+ 5 PLN do całości zamówienia)</label>
+
             </div>
             <div class="agreement">
                 <input type="checkbox" id="rules" class="green-checkbox" />

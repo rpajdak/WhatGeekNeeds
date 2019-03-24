@@ -1,7 +1,7 @@
 .item-container,
 .item-description-container {
     color: #363636;
-    margin: 0;
+    margin: 0 9px;
 
     h1,
     span {
@@ -21,7 +21,10 @@
     }
 }
 
-
+.item-container-size-variant-span{
+    margin: 6px auto 24px auto;
+    color:$primary-font-color;
+}
 
 .item-text {
     span {
@@ -50,26 +53,34 @@
 }
 
 .thumbnails {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-
-    img {
-        border: 1px solid #f0eeee;
+    
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 5px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        li{
+            border: 1px solid #f0eeee;
+        }
     }
+    
 }
 
 .item-price {
     color: $primary-font-color;
-    font-family: $primary-font;
     text-align: end;
-
     p {
         font-size: 40px;
+        font-family: $primary-font;
     }
 
     span {
         font-size: 24px;
+        font-family: $primary-font;
     }
 }
 
@@ -78,14 +89,14 @@
 }
 
 .highlighted {
-    border: 1px solid $light-green;
+    border: 1px solid $light-green !important;
 }
 
 .item-sizes,
 .item-variants {
     @include flex(space-evenly, center);
     width: 100%;
-
+    margin-top:12px;
     li {
         width: 60px;
         height: 60px;
@@ -94,6 +105,7 @@
         font-weight: 800;
         font-family: $secondary-font;
         font-size: 32px;
+        border: 1px solid #f0eeee;
 
         a {
             @include flex(center, center);
@@ -131,7 +143,7 @@
         font-size: 8px;
         padding: 6px;
         margin: 0;
-        padding: 0 0 2px 0;
+        padding:6px 0;
         font-weight: 800;
         border: 0;
         width: 33%;
@@ -212,7 +224,6 @@ ul.similiar-items-list {
 
     .thumbnails {
         grid-template-columns: repeat(3, 220px);
-        justify-content: space-between;
 
     }
 
@@ -230,7 +241,7 @@ ul.similiar-items-list {
 
     .item-sizes,
     .item-variants {
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         li {
             width: 160px;
