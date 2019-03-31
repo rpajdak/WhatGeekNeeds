@@ -94,7 +94,7 @@ function openCloseSortMenu() {
     sortMenuCloseBtn.addEventListener("click", () => {
         sortMenuDiv.classList.add("hide");
         fadeDiv.classList.toggle("active-fade");
-        document.body.style.overflow = "auto"
+        document.body.style.overflow = "auto";
     })
 }
 /* Change thumbnails on item page */

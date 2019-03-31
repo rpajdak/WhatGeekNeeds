@@ -25,6 +25,9 @@
 }
 
 
+.price-basket {
+    display: none;
+}
 
 .header-user-login,
 .header-user-login-desktop,
@@ -278,10 +281,58 @@ a {
     text-align: center;
     border: 4px solid #f0eeee;
     background-color: #ffffff;
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
 
     a {
         margin: 0;
         padding: 0;
+    }
+}
+
+.item-box-on-hover {
+    display: none;
+}
+
+.item-box:hover {
+    border-color: $light-green;
+}
+
+.item-box:hover .item-box-on-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 84%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(108, 218, 0, 0.8);
+    z-index: 100;
+
+    button {
+        width: 80%;
+        height: 40px;
+        background-color: $primary-white;
+        margin: 24px auto 18px auto;
+
+        a {
+            color: $light-green;
+            font-family: $semi-bold;
+            font-size: 20px;
+        }
+    }
+}
+
+.item-box:hover .item-name-price {
+    color: white;
+    background-color: $light-green;
+}
+
+.item-box:hover .top-product-price {
+    p {
+        color: $primary-white;
     }
 }
 
@@ -343,6 +394,10 @@ a {
     }
 }
 
+.products-sliders {
+    display: none;
+}
+
 /* Section blog */
 .section-blog-container {
     height: 136px;
@@ -386,6 +441,17 @@ a {
 }
 
 /* Section Newsletter */
+
+/* Hidden on mobile */
+
+
+.newsletter-contact,
+.newsletter-bok,
+.newsletter-copyright-text {
+    display: none;
+}
+
+
 .newsletter-container {
     width: 100%;
     height: 163px;
@@ -401,24 +467,18 @@ a {
     button {
         margin-left: 13px;
         width: 90%;
-        height: 20%;
+        margin-bottom: 6px;
+        height: 18px;
         background-color: #ffffff;
         font-family: "Suprema - Semi Bold";
         font-weight: 400;
         font-size: 13px;
         color: $light-green;
         text-transform: uppercase;
+        margin-bottom: 12px
     }
 
-    p {
-        font-size: 14px;
-        font-family: "Suprema - Semi Bold";
-        color: #ffffff;
-        display: block;
-        margin: 6px 0 0 9px;
-        padding: 0;
-        width: 100%;
-    }
+
 
     input::placeholder {
         color: #ffffff;
@@ -429,19 +489,25 @@ a {
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
 }
 
-.newsletter-wrapper>div {
-    width: 50%;
-    height: 100%;
-    display: flex;
+.newsletter-inputs {
     flex-direction: column;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-end;
+    width: 100%;
+
+    h3 {
+        color: $primary-white;
+        font-size: 12px;
+        width: 180%;
+        margin: 6px 0 0 6px;
+    }
 }
 
 .newsletter-image {
     @include flex(center, center);
+    width: 100%;
 
     img {
         width: 80%;
@@ -454,19 +520,17 @@ a {
     box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.1);
     background-color: $newsletter-input-bgcol;
     font-family: $secondary-font;
-    margin-top: 4px;
-    margin-left: 13px;
+    margin: 6px 13px;
     padding: 8px;
 }
 
 .newsletter-container-checkbox {
-    width: 50%;
     height: 20px;
     margin-top: 5px;
-    margin-left: 13px;
+    margin-left: 16px;
 
     label {
-        width: 180%;
+        width: 100%;
         align-items: center;
         position: relative;
         padding-left: 25px;
@@ -533,8 +597,7 @@ label:before {
 }
 
 .social-media {
-    font-family: $primary-font;
-    font-size: 6px;
+
     height: 100%;
     width: 50%;
     @include flex(flex-end, center);
@@ -542,6 +605,11 @@ label:before {
     img {
         width: 28px;
         height: 28px;
+    }
+
+    h3 {
+        font-family: $primary-font;
+        font-size: 8px;
     }
 
     a {
@@ -665,10 +733,10 @@ label:before {
 
     /* Section newsletter */
     .newsletter-container {
-        height: 224px;
+        height: 240px;
 
-        p {
-            font-size: 24px;
+        h3 {
+            font-size: 22px;
             margin-top: 10px;
         }
 
@@ -706,8 +774,12 @@ label:before {
     }
 
     .social-media {
-        font-size: 20px !important;
+
         margin-right: 8px;
+
+        h3 {
+            font-size: 20px;
+        }
 
         img {
             width: 40px;
@@ -723,8 +795,7 @@ label:before {
 
     header,
     section,
-    article,
-    footer {
+    article {
         width: 1200px;
         margin: 20px auto;
     }
@@ -739,11 +810,46 @@ label:before {
 
     .header-container {
         @include grid(repeat(2, 1fr), auto);
+        grid-template-rows: auto;
+        grid-template-areas: "logo user-login"
+            "logo search";
+        justify-items: flex-end;
+        margin: 0 0 18px 0;
+    }
 
+    .header-search-form {
+        grid-area: search;
+        display: flex;
+        justify-content: flex-end;
+        width: 500px;
+        margin-right: 0;
+
+        input {
+            width: 320px;
+        }
+
+        button {
+            width: 180px;
+        }
+    }
+
+    .header-user-login {
+        grid-area: user-login;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 500px;
+
+        p {
+            font-size: 16px;
+            margin-left: 5px;
+        }
     }
 
     .header-logo {
         @include flex(flex-start, center);
+        grid-area: logo;
+        width: 100%;
 
         img {
             width: auto;
@@ -752,35 +858,36 @@ label:before {
         }
     }
 
+    .hamburger-menu-icon {
+        display: none;
+    }
+
     .header-user-login-desktop>div {
         width: 100%;
         margin: 10px auto;
 
     }
 
-    .header-user-login-desktop {
-        @include flex(center, center);
-
-        a {
-            @include flex(flex-start, flex-end);
-        }
+    .price-basket {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
 
         input {
             background-color: #f0eeee;
             box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-            padding: 8px;
+            text-align: center;
             color: $input-font-color;
             font-family: $primary-font;
             font-weight: 300;
             height: 32px;
-            width: 90px;
-            margin: 0;
-            padding: 0;
+            width: 120px;
+            margin: 0 0 0 6px;
         }
 
         button {
             color: $primary-white;
-            width: 200px;
+            width: 180px;
             height: 32px;
             background-color: $light-green;
             @include flex(center, center);
@@ -793,66 +900,8 @@ label:before {
             }
         }
 
-        p {
-            font-size: 16px;
-            margin-left: 5px;
-        }
-
     }
 
-    .desktop-login-basket {
-        @include flex(space-between, flex-end);
-    }
-
-    .price-basket {
-        display: inline-flex;
-        justify-content: flex-end;
-
-        input {
-            width: 160px;
-            padding-left: 6px;
-        }
-
-        button {
-            font-family: $semi-bold;
-            font-size: 18px;
-        }
-    }
-
-    .header-search-form-desktop {
-        display: inline-flex;
-        justify-content: flex-end;
-
-        input {
-            width: 66.6%;
-            height: 40px;
-            background-color: #f0eeee;
-            box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-            padding: 8px;
-            color: $input-font-color;
-            font-family: $primary-font;
-            font-weight: 300;
-
-            &::placeholder {
-                @include header-placeholder;
-            }
-        }
-
-        button {
-
-            height: 40px;
-            background-color: $dark-green;
-            @include flex(center, center);
-            font-family: $semi-bold;
-            font-size: 16px;
-            color: #ffffff;
-
-            img {
-                width: 25px;
-                height: auto;
-            }
-        }
-    }
 
     /* Navigation on desktop */
 
@@ -891,8 +940,8 @@ label:before {
 
     }
 
-    li {
-        margin: 0;
+    .main li:last-child {
+        color: red;
     }
 
     .drop {
@@ -942,6 +991,7 @@ label:before {
     .slider-top-product {
         height: 500px;
         @include grid(repeat(2, 1fr), auto);
+        grid-column-gap: 8px;
         margin-top: 30px;
         align-items: flex-end;
         justify-content: space-between;
@@ -1054,6 +1104,7 @@ label:before {
         height: 40px !important;
         top: 40px;
         left: -7px;
+        z-index: 99;
     }
 
     .item-name-price {
@@ -1090,15 +1141,9 @@ label:before {
         position: relative;
         font-size: 24px !important;
         line-height: 24px;
+        text-decoration: $red-font-color line-through;
     }
 
-    .top-product-price-old::before {
-        border-bottom: 2px solid red;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 40%;
-    }
 
     /* Section products list */
     .products-list {
@@ -1121,14 +1166,9 @@ label:before {
         display: block;
     }
 
-    .products-list-desktop {
-        display: none;
-        // @include grid(repeat(4, 25%), repeat(2, 380px));
-    }
-
     .item-name-price p {
         font-size: 35px;
-        line-height: 35px;
+        // line-height: 35px;
     }
 
     .show-more {
@@ -1148,14 +1188,16 @@ label:before {
 
     }
 
-    /* Section hidden on desktop */
-
-    .header-user-login {
-        display: none;
+    .products-sliders {
+        display: block;
     }
 
-    .header-search-form {
-        display: none;
+    .multiple-items {
+        width: 100%;
+        height: 380px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
     }
 
     .section-banner-container {
@@ -1163,8 +1205,161 @@ label:before {
     }
 
 
+    /*Section Blog */
+
+    .section-blog-container {
+        height: 240px;
+        margin: 18px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            margin-bottom: 12px;
+        }
+    }
+
+    /* Footer on desktop */
 
 
+    .newsletter-container {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background: $light-green;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $primary-white;
+        margin-bottom: 12px;
+
+        p {
+            position: relative;
+        }
+
+        button {
+            margin-left: 0;
+        }
+    }
+
+    .newsletter-wrapper {
+        width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        grid-column-gap: 2%;
+        justify-content: center;
+        margin: 0 auto;
+        flex-shrink: 1;
+
+        h3 {
+            font-family: $semi-bold;
+            color: $primary-white;
+            left: 0;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+    }
+
+    .newsletter-image {
+        display: none !important;
+    }
+
+    .newsletter-inputs,
+    .newsletter-contact,
+    .newsletter-bok {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .newsletter-inputs {
+        width: 100% !important;
+
+        input::placeholder {
+            color: $primary-white;
+            font-size: 20px;
+            padding-left: 12px;
+        }
+    }
+
+    .newsletter-input {
+        margin-left: 0;
+    }
+
+    .newsletter-bok {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        a {
+            margin: 12px 0;
+        }
+    }
+
+    .newsletter-contact {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        a {
+            margin-bottom: 6px;
+            line-height: 24px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+
+            img {
+                margin: auto 6px auto 0;
+                width: 24px;
+                height: auto;
+            }
+        }
+
+
+    }
+
+    .newsletter-contact-social-media {
+        display: inline-flex;
+        justify-content: flex-end;
+        margin-right: 15%;
+        margin-bottom: 6px;
+        a {
+            margin-right: 18px;
+        }
+    }
+
+    .newsletter-copyright-text {
+        width: 1200px;
+        position: relative;
+
+        p {
+            font-family: $secondary-font;
+            text-transform: none;
+            font-size: 18px;
+            margin: 6px auto;
+            color: $primary-white;
+            opacity: 0.7;
+        }
+    }
+
+    .newsletter-copyright-text::before,
+    .newsletter-copyright-text::after {
+        position: absolute;
+        content: "";
+        width: 100vw;
+        height: 1px;
+        background-color: #aeeb73;
+        top: 0;
+    }
+
+    .newsletter-copyright-text::after {
+        right: 0;
+    }
+
+    /* Section Footer */
+    .footer-container {
+        display: none;
+    }
 
 
 

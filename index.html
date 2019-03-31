@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
@@ -20,26 +22,14 @@
                     <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
                     <p>moje konto</p>
                 </a>
+                <div class="price-basket">
+                    <input type="text" id="name" placeholder="00,00 PLN">
+                    <button type="button"><img src="img/header/koszyk_kopia.png" alt=""> Koszyk</button>
+                </div>
                 <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
                 </button>
-            </div>
-            <div class="header-user-login-desktop">
-                <div class="desktop-login-basket">
-                    <a href="#">
-                        <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
-                        <p>moje konto</p>
-                    </a>
-                    <div class="price-basket">
-                        <input type="text" id="name" placeholder="00,00 PLN">
-                        <button type="button"><img src="img/header/koszyk_kopia.png" alt=""> Koszyk</button>
-                    </div>
-                </div>
-                <div class="header-search-form-desktop">
-                    <input type="text" id="name" placeholder="Czego szukasz?">
-                    <button type="button"><img src="img/header/search-icon.png" alt=""> Szukaj</button>
-                </div>
-            </div>
 
+            </div>
             <div class="header-search-form">
                 <input type="text" id="name" placeholder="Czego szukasz?">
                 <button type="button"><img src="img/header/search-icon.png" alt=""> Szukaj</button>
@@ -139,8 +129,12 @@
                                 <p class="top-product-price-new">56 <span>pln</span></p>
                             </div>
                         </div>
-                    </a></div>
-            </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
     </section>
     <section>
         <div class="products-list-text">
@@ -156,6 +150,10 @@
                         <p>69 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -166,6 +164,10 @@
                         <p>24 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -176,6 +178,10 @@
                         <p>45 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -186,6 +192,10 @@
                         <p>32 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -196,6 +206,10 @@
                         <p>18 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -206,6 +220,10 @@
                         <p>24 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -216,89 +234,10 @@
                         <p>52 <span>pln</span></p>
                     </div>
                 </a>
-            </div>
-           <div class="item-box"><a href="#">
-                   <div class="item-image">
-                       <img src="item-pages/superman-socks/super_man.png" alt="Superman socks">
-                   </div>
-                   <div class="item-name-price">
-                       <h3>Skarpety Superman</h3>
-                       <p>32 <span>pln</span></p>
-                   </div>
-               </a>
-           </div>
-
-        </div>
-        <div class="products-list-desktop">
-            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
-                    <div class="item-image">
-                        <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>T-shirt nerd</h3>
-                        <p>69 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="item-pages/mushroom/gadget1.png" alt="Gadget Mushroom">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Gadżet antystresowy</h3>
-                        <p>24 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="img/items/mug.png" alt="Mug game-over">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Kubek game over</h3>
-                        <p>45 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="item-pages/tesla-socks/tesla_socks.png" alt="Tesla socks">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Skarpety tesla</h3>
-                        <p>32 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="item-pages/webcam cover/webcam_cover.png" alt="Webcam cover">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Zaślepka na kamerkę</h3>
-                        <p>18 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="item-pages/gadget-donut/gadget-donut.png" alt="Gadget donut">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>Gadżet antystresowy</h3>
-                        <p>24 <span>pln</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="item-box"><a href="#">
-                    <div class="item-image">
-                        <img src="item-pages/3-gadgets/3_KOTKI.png" alt="3 gadgets">
-                    </div>
-                    <div class="item-name-price">
-                        <h3>3 gadżet antystresowe</h3>
-                        <p>52 <span>pln</span></p>
-                    </div>
-                </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
             <div class="item-box"><a href="#">
                     <div class="item-image">
@@ -309,12 +248,196 @@
                         <p>32 <span>pln</span></p>
                     </div>
                 </a>
+                <div class="item-box-on-hover">
+                    <button><a href="#">Dodaj do koszyka</a></button>
+                    <button><a href="#">Zobacz więcej</a></button>
+                </div>
             </div>
         </div>
         <div class="show-more">
             <p>Pokaż więcej</p>
             <a href="all-items.html"><button><img src="img/items/item-list-cross.png"
                         alt="Cross to show more"></button></a>
+        </div>
+        <div class="products-list-text">
+            <p>Gadżety antystresowe</p>
+        </div>
+        <div class="products-sliders">
+            <div class="multiple-items">
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-list-text">
+                <p>Kubki</p>
+            </div>
+            <div class="multiple-items">
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+                <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                        <div class="item-image">
+                            <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                        </div>
+                        <div class="item-name-price">
+                            <h3>T-shirt nerd</h3>
+                            <p>69 <span>pln</span></p>
+                        </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section>
@@ -330,9 +453,9 @@
     </section>
     <section>
         <div class="newsletter-container">
-            <p>Zapisz się do newslettera</p>
             <div class="newsletter-wrapper">
-                <div>
+                <div class="newsletter-inputs">
+                    <h3>Zapisz się do newslettera</h3>
                     <input type="text" class="newsletter-input" id="name" placeholder="Imię">
                     <input type="text" class="newsletter-input" id="e-mail" placeholder="e-mail">
                     <div class="newsletter-container-checkbox">
@@ -345,7 +468,29 @@
                 <div class="newsletter-image">
                     <img src="img/newsletter/newsletter-envelopes.png" alt="White envelopes">
                 </div>
+                <div class="newsletter-bok">
+                    <h3>Bok</h3>
+                    <a href="#">Regulamin</a>
+                    <a href="#">Prywatność</a>
+                    <a href="#">Faq</a>
+                </div>
+                <div class="newsletter-contact">
+                    <div>
+                        <h3>Kontakt</h3>
+                        <a href="mailto:contact@whatgeekneeds.com"><img class="envelope" src="img/contact/envelope.png" alt="Green envelope">contact@whatgeekneeds.com</a>
+                        <a href="#"><img class="phone" src="img/contact/phone.png" alt="phone">+48 555 333 222</a>
+                        <a href="#"><img class="pointer" src="img/contact/localization.png" alt="Maps pointer">ul. Bracka 21/80 31 - 005 Kraków</a>
+                    </div>
+                    <div class="newsletter-contact-social-media">
+                        <a href="#"><img src="img/footer/facebook_logo_transparent.png" alt="Facebook Logo"></a>
+                        <a href="#"><img src="img/footer/instagram_logo_transparent.png" alt="Instagram Logo"></a>
+                    </div>
+                </div>
+                <div class="newsletter-copyright-text">
+                    <p>Copyright 2019 whatgeekneeds.com</p>
+                </div>
             </div>
+            
         </div>
     </section>
     <footer>
@@ -353,13 +498,27 @@
             <span class="copyright-text">
                 <p>Copyright 2019 whatgeekneeds.com</p>
             </span>
-            <span class="social-media">
+            <div class="social-media">
                 <h3>Social Media:</h3>
                 <a href="#"><img src="img/footer/facebook_logo.png" alt="Facebook Logo"></a>
                 <a href="#"><img src="img/footer/instagram_logo.png" alt="Instagram Logo"></a>
-            </span>
+            </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.multiple-items').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+            });
+        });
+    </script>
     <script src="js/app.js"></script>
 </body>
 
